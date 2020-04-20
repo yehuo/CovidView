@@ -1,0 +1,21 @@
+<div id="dashboard-sidebar" class="sidebar">
+	{#主体部分的侧边栏#}
+	<ul class="nav flex-column" id="dashboard-sidebar-pagelist">
+		<li class="nav-item"><a href="{{url_for('dashboard.index')}}">
+				<p class="logo">CrovidView</p>
+			</a></li>
+		<li class="nav-item"><a href="{{ url_for('dashboard.forecast') }}"><i class="fa fa-bar-chart"></i>疫情预览</a></li>
+		<li class="nav-item"><a href="{{ url_for('dashboard.maps') }}"><i class="fa fa-map-marker"></i>疫情热力图</a></li>
+		<li class="nav-item"><a href="{{ url_for('dashboard.forecast') }}"><i class="fa fa-line-chart"></i>疫情预测</a></li>
+		<li class="nav-item"><a href="{{ url_for('topic.index',board_id=1) }}"><i class="fa fa-rocket"></i>疫情新闻</a></li>
+		<li class="nav-item"><a href="{{ url_for('topic.index',board_id=2) }}"><i class="fa fa-paper-plane"></i>最新动态</a>
+		</li>
+		<li class="nav-item"><a href="{{ url_for('message.index') }}"><i class="fa fa-envelope"></i>用户消息</a></li>
+	</ul>
+	<ul class="nav flex-column" id="dashboard-sidebar-doclist">
+		<li class="nav-item"><i class="fa fa-chain"></i>相关文档</li>
+		<li class="nav-item"><a><i class="fa fa-file-text"></i>Readme</a></li>
+		<li class="nav-item"><a><i class="fa fa-user-circle"></i>User Guide</a></li>
+		<li class="nav-item"><a><i class="fa fa-flash"></i>APIS</a></li>
+	</ul>
+</div>

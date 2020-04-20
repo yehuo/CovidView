@@ -1,0 +1,69 @@
+{% extends 'topic/base.html' %}
+{% block title %}
+    <title>
+        Topic | index
+    </title>
+{% endblock %}
+
+{% block topicList %}
+    <div id="content">
+        <div class="panel">
+            <div class="header">
+                <a href="/topic">
+                    全部的帖子
+                </a>
+                {% for b in bs %}
+                    <a href="/topic?board_id={{ b.id }}"
+                       class="topic-tab" id="tab-{{ b.id }}">
+                        {{ b.title }}
+                    </a>
+                {% endfor %}
+            </div>
+            <div class="inner p-0">
+                <div id="topic-list">
+                    {% for t in ms %}
+                        {% set u = t.user() %}
+{#                        用户头像#}
+                        <div>
+                            <a class="user_avatar pull-left"
+                               href="{{ url_for('user.index', id=t.user_id) }}">
+                                <img src="{{ u.img }}">
+                            </a>
+                        </div>
+{#                        topic内容#}
+                        <div class="cell">
+                            <div class="topic_title_wrapper">
+{#                            topic标题#}
+                                <a class="topic_title" href="{{ url_for('topic.detail', id=t.id) }}">
+                                    {% if t.title == '' %}
+                                        无标题
+                                    {% else %}
+                                        {{ t.title }}
+                                    {% endif %}
+                                </a>
+                            </div>
+
+                            <div class="topic-block">
+{#                                topic信息，截断到前300个文字#}
+                                <p>{{ t.content | truncate(300) }}</p>
+                            </div>
+                            <div class="topic-time">
+{#                                topic属性信息：回复数/点击数/发布者/发布时间#}
+                                <span class="counts">
+                                    <span class="count_of_replies" title="回复数">{{ t.replies() | count }}</span>
+                                    <span class="count_seperator">/</span>
+                                    <span class="count_of_visits" title="点击数">{{ t.views }}</span>
+                                </span>
+
+                                <span class="topic-from">
+                                    来自<a>{{ u.username }}</a>
+                                </span>
+                                <span>{{ t.createTime }}</span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

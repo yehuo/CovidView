@@ -1,0 +1,119 @@
+{% extends "./dashboard/base.html" %}
+
+{% block title %}
+<title>
+	Dashboard | {{ kind }}
+</title>
+{% endblock %}
+
+{% block statisblock %}
+<div id="statis-blocks" class="col-12 row justify-content-around my-2">
+	<div class="confirm view-block px-3">
+		<label>现有确诊：</label>
+		<p>{{ sd.confirm }}</p>
+		<p>更新时间：{{ sd.updateTime }}</p>
+	</div>
+	<div class="suspect view-block px-3">
+		<label>现有疑似：</label>
+		<p>{{ sd.suspect }}</p>
+		<p>更新时间：{{ sd.updateTime }}</p>
+	</div>
+	<div class="dead view-block px-3">
+		<label>累计死亡：</label>
+		<p>{{ sd.dead }}</p>
+		<p>更新时间：{{ sd.updateTime }}</p>
+	</div>
+	<div class="heal view-block px-3">
+		<label>累计治愈：</label>
+		<p>{{ sd.heal }}</p>
+		<p>更新时间：{{ sd.updateTime }}</p>
+	</div>
+</div>
+{% endblock %}
+
+{% block viewblock %}
+<div id="chart1" class="col-8 m-0 p-0" style="height: 600px;"></div>
+<div id="chart2" class="col-4 m-0 p-0" style="height: 600px;"></div>
+<script type="text/javascript">
+	var myChart1 = echarts.init(document.getElementById('chart1'));
+	var option1 = {
+		legend: {},
+		tooltip: {},
+		dataset: {
+			source: [
+				['product', '2015', '2016', '2017'],
+				['Matcha Latte', 43.3, 85.8, 93.7],
+				['Milk Tea', 83.1, 73.4, 55.1],
+				['Cheese Cocoa', 86.4, 65.2, 82.5],
+				['Walnut Brownie', 72.4, 53.9, 39.1]
+			]
+		},
+		xAxis: {
+			type: 'category'
+		},
+		yAxis: {},
+		// Declare several bar series, each will be mapped
+		// to a column of dataset.source by default.
+		series: [{
+				type: 'bar'
+			},
+			{
+				type: 'bar'
+			},
+			{
+				type: 'bar'
+			}
+		]
+	};
+
+	option2 = $.post("/dashboard/pieChartData", {
+			"name": '{{ sd.country }}'
+		},
+		function(data, status) {
+			var myChart2 = echarts.init(document.getElementById('chart2'));
+			var option2 = {
+				backgroundColor: '#2c343c',
+				visualMap: {
+					show: false,
+					min: 80,
+					max: 600,
+					inRange: {
+						colorLightness: [0, 1]
+					}
+				},
+				series: [{
+					name: '{{sd.country}}',
+					type: 'pie',
+					radius: '55%',
+					data: data.data,
+					roseType: 'angle',
+					label: {
+						normal: {
+							textStyle: {
+								color: 'rgba(255, 255, 255, 0.3)'
+							}
+						}
+					},
+					labelLine: {
+						normal: {
+							lineStyle: {
+								color: 'rgba(255, 255, 255, 0.3)'
+							}
+						}
+					},
+					itemStyle: {
+						normal: {
+							color: '#c23531',
+							shadowBlur: 200,
+							shadowColor: 'rgba(0, 0, 0, 0.5)'
+						}
+					}
+				}]
+			};
+			myChart2.setOption(option2);
+		});
+
+	myChart1.setOption(option1);
+	// myChart2.setOption(option2);
+</script>
+{% endblock %}

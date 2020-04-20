@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    {% endblock %}
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/login.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <script src="/static/js/login.js"></script>
+</head>
+<body>
+<div id="back_top"></div>
+    <div id="back_mid"></div>
+    <div id="back_bottom"></div>
+<div class="container">
+    <div id="welcome" class="row justify-content-center mb-3 mt-5">
+        {% block welcome %}
+        {% endblock %}
+    </div>
+
+    <div id="main" class="row justify-content-center">
+        {% block main %}
+        {% endblock %}
+    </div>
+    <div id="message" class="row justify-content-center">
+        {% if m == 'register_e' %}
+            <div class="message">
+                <p>用户名已存在</p>
+            </div>
+        {% elif m == 'register_s' %}
+            <div class="message">
+                <p id="register_t">注册成功</p>
+            </div>
+        {% elif m == 'register_a' %}
+            <div class="message">
+                <p>请检查账号或者密码长度是否正确</p>
+            </div>
+        {% elif m == 'login_f' %}
+            <div class="message">
+                <p>登录失败,请检查账号或者密码是否正确</p>
+            </div>
+        {% endif %}
+    </div>
+</div>
+</body>
+</html>

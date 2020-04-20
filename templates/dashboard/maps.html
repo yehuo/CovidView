@@ -1,0 +1,39 @@
+{% extends "./dashboard/base.html" %}
+
+{% block title %}
+    <title>
+        Dashboard | {{ kind }}
+    </title>
+{% endblock %}
+
+{% block statisblock %}
+    <div>
+        <div class="confirm">
+            <label>现有确诊：</label>
+            <p>{{ s.confirm }}</p>
+        </div>
+        <div class="suspect">
+            <label>现有疑似：</label>
+            <p>{{ s.suspect }}</p>
+        </div>
+        <div class="dead">
+            <label>累计死亡：</label>
+            <p>{{ s.dead }}</p>
+        </div>
+        <div class="heal">
+            <label>累计治愈：</label>
+            <p>{{ s.heal }}</p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block viewblock %}
+    <div id="control-list" class="col-8 bg-secondary"></div>
+    <div id="hot-maps" class="col-4 bg-dark"></div>
+    <script type="text/javascript">
+        var rawdata = '{{ s }}';
+        var updatime = '{{ t }}';
+        var level = '{{ l }}';
+        var data = '{{ ed.children|tojson }}'
+    </script>
+{% endblock %}

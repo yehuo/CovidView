@@ -1,0 +1,36 @@
+{% extends "./dashboard/base.html" %}
+
+{% block title %}
+    <title>
+        Dashboard | {{ kind }}
+    </title>
+{% endblock %}
+
+{% block statisblock %}
+    <div>
+        <div class="confirm">
+            <label>现有确诊：</label>
+            <p>{{ d.confirm }}</p>
+        </div>
+        <div class="suspect">
+            <label>现有疑似：</label>
+            <p>{{ d.suspect }}</p>
+        </div>
+        <div class="dead">
+            <label>累计死亡：</label>
+            <p>{{ d.dead }}</p>
+        </div>
+        <div class="heal">
+            <label>累计治愈：</label>
+            <p>{{ d.heal }}</p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block viewblock %}
+    <div id="forecast-table" class="col-8 bg-secondary"></div>
+    <script type="text/javascript">
+        var data = '{{ d }}'
+        alert(data)
+    </script>
+{% endblock %}

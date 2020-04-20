@@ -1,0 +1,26 @@
+#login-container {
+    width: 40%;
+}
+
+#app-login {
+    display: flex;
+    justify-content: center;
+}
+
+#app-login div {
+    margin: 5px;
+}
+
+#app-login div img{
+    width: 15%;
+    height: auto;
+}
+
+#login-container {
+    background: #4e555b;
+}
+
+#login-container.input-block {
+    width: 85%;
+    margin: 0 auto;
+}

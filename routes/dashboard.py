@@ -26,12 +26,12 @@ def index():
     # t=time UpdateTime(String)
     # n=name Country/City/Province name
     # d=data 一个数据类组成的列表
-    statis_data_item = ChinaStatus.one(province='all')
+    statis_data = ChinaStatus.one(province='all')
     chart_data_list = ChinaStatus.top(name='confirm', num=8, city='all')
-    time = ChinaStatus.one().updateTime
-    name = 'China'
+    time = statis_data.updateTime
+    name = '中国'
     u = current_user()
-    return render_template('./dashboard/statis.html', l='C', n=name, t=time, sd=statis_data_item, u=u,
+    return render_template('./dashboard/statis.html', l='C', n=name, t=time, sd=statis_data, u=u,
                            cd=chart_data_list)
 
 
@@ -45,10 +45,10 @@ def statis(name):
     elif typename == 'foreign':
         data = GlobalStatus.one(country=name)
     time = data.updateTime
-    statis_data_item = data
+    statis_data = data
     u = current_user()
-    return render_template('./dashboard/statis.html', l='p', n=name, t=time, sd=statis_data_item, u=u,
-                           cd=statis_data_item)
+    return render_template('./dashboard/statis.html', l='p', n=name, t=time, sd=statis_data, u=u,
+                           cd=statis_data)
 
 
 @main.route('/pieChartData', methods=['POST'])
@@ -56,6 +56,7 @@ def getPieData():
     countryName = request.form["name"]
     print(countryName)
     x = Country().one(name=countryName)
+    print(countryName)
     x = x.APIType
     if x == 'basic':
         result = ChinaStatus.one(country=countryName)
@@ -73,6 +74,18 @@ def getPieData():
 @main.route('/forecast')
 def forecast():
     data = GlobalStatus.all(country='美国')
+    user = current_user()
+    statis_data = {
+        'time': data.updateTime,
+        'name': '美国',
+        'data': {
+            'confirm': data.confirm,
+            'heal': data.heal,
+            'dead': data.dead,
+            'nowConfirm': data.nowConfirm
+        }
+    }
+    return render_template('dashboard/forecast.html', data=statis_data, u=user, name='美国')
 
 
 @main.route('/maps/')

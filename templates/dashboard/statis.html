@@ -32,88 +32,118 @@
 {% endblock %}
 
 {% block viewblock %}
-<div id="chart1" class="col-8 m-0 p-0" style="height: 600px;"></div>
-<div id="chart2" class="col-4 m-0 p-0" style="height: 600px;"></div>
+<div id="chart-l" class="col-8 m-0 p-0" style="height: 600px;"></div>
+<div id="chart-r" class="col-4 m-0 p-0" style="height: 600px;"></div>
 <script type="text/javascript">
-	var myChart1 = echarts.init(document.getElementById('chart1'));
-	var option1 = {
-		legend: {},
-		tooltip: {},
-		dataset: {
-			source: [
-				['product', '2015', '2016', '2017'],
-				['Matcha Latte', 43.3, 85.8, 93.7],
-				['Milk Tea', 83.1, 73.4, 55.1],
-				['Cheese Cocoa', 86.4, 65.2, 82.5],
-				['Walnut Brownie', 72.4, 53.9, 39.1]
-			]
-		},
-		xAxis: {
-			type: 'category'
-		},
-		yAxis: {},
-		// Declare several bar series, each will be mapped
-		// to a column of dataset.source by default.
-		series: [{
-				type: 'bar'
+	var statis_chart_l = echarts.init(document.getElementById('chart-l'));
+	var statis_chart_r = echarts.init(document.getElementById('chart-r'));
+	$.post('/dashboard/barChartData', {
+		"name": '{{ sd.country }}',
+	}, ).done(function(data) {
+		var option = {
+			title: {
+				text: '疫情排名前8地区（湖北以外）',
+				subtext: '数据来自丁香园',
 			},
-			{
-				type: 'bar'
+			tooltip: {
+				trigger: 'axis',
+				axisPointer: {
+					type: 'shadow',
+				},
 			},
-			{
-				type: 'bar'
+			legend: {
+				left: 'center',
+				top: 'bottom',
+				data: ['heal', 'dead', 'confirm']
+			},
+			dataset: {
+				source: []
+			},
+			grid: {
+				// 表格位置
+				left: '3%',
+				right: '4%',
+				bottom: '3%',
+				containLabel: true
+			},
+			xAxis: {
+				type: 'value',
+				// 表格中左右留出的宽度
+				boundaryGap: [0, 0.01],
+			},
+			yAxis: {
+				type: 'category',
+			},
+			series: [{
+					type: 'bar'
+				},
+				{
+					type: 'bar'
+				},
+				{
+					type: 'bar'
+				}
+			],
+		};
+		for (var i = 0; i < 9; i++) {
+			item = data.data[i];
+			if (item[0] != '湖北') {
+				option.dataset.source.push(item);
 			}
-		]
-	};
-
-	option2 = $.post("/dashboard/pieChartData", {
+		}
+		statis_chart_l.setOption(option);
+	})
+	$.post("/dashboard/pieChartData", {
 			"name": '{{ sd.country }}'
 		},
 		function(data, status) {
-			var myChart2 = echarts.init(document.getElementById('chart2'));
-			var option2 = {
-				backgroundColor: '#2c343c',
-				visualMap: {
-					show: false,
-					min: 80,
-					max: 600,
-					inRange: {
-						colorLightness: [0, 1]
+			var option = {
+				title: {
+					text: '各地区感染人数情况',
+					subtext: '数据来自丁香园',
+					left: 'center'
+				},
+				tooltip: {
+					trigger: 'item',
+					formatter: '{a} <br/>{b} : {c} ({d}%)'
+				},
+				legend: {
+					left: 'center',
+					top: 'bottom',
+					data: data.names
+				},
+				toolbox: {
+					show: true,
+					feature: {
+						mark: {
+							show: true
+						},
+						dataView: {
+							show: true,
+							readOnly: false
+						},
+						magicType: {
+							show: true,
+							type: ['pie', 'funnel']
+						},
+						restore: {
+							show: true
+						},
+						saveAsImage: {
+							show: true
+						}
 					}
 				},
 				series: [{
-					name: '{{sd.country}}',
+					name: '面积模式',
 					type: 'pie',
-					radius: '55%',
-					data: data.data,
-					roseType: 'angle',
-					label: {
-						normal: {
-							textStyle: {
-								color: 'rgba(255, 255, 255, 0.3)'
-							}
-						}
-					},
-					labelLine: {
-						normal: {
-							lineStyle: {
-								color: 'rgba(255, 255, 255, 0.3)'
-							}
-						}
-					},
-					itemStyle: {
-						normal: {
-							color: '#c23531',
-							shadowBlur: 200,
-							shadowColor: 'rgba(0, 0, 0, 0.5)'
-						}
-					}
+					radius: [30, 110],
+					center: ['50%', '50%'],
+					roseType: 'area',
+					data: data.data
 				}]
 			};
-			myChart2.setOption(option2);
+			statis_chart_r.setOption(option);
 		});
-
-	myChart1.setOption(option1);
-	// myChart2.setOption(option2);
 </script>
 {% endblock %}

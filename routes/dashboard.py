@@ -3,6 +3,8 @@ from flask import (
     Blueprint)
 from models.data_china import ChinaStatus
 from models.data_global import GlobalStatus
+from models.c_history import ChinaHistory
+from models.g_history import GlobalHistory
 from routes.helper import current_user
 from models.user import User
 from models.country import Country
@@ -89,6 +91,7 @@ def getPieData():
 @main.route('/barChartData', methods=['POST'])
 def getBarData():
     countryName = request.form["name"]
+    print(countryName)
     results = []
     results.append(['provinceName', 'confirm', 'dead', 'heal'])
     name_info = Country().one(name=countryName)
@@ -107,11 +110,12 @@ def getBarData():
 
 @main.route('/forecast')
 def forecast():
-    data = GlobalStatus.all(country='美国')  # 美国数据
+    # 支持两种预测：China/Global,首页显示Global
+    data = GlobalStatus.one(continent='全球')  # 全球数据
     user = current_user()
-    statis_data = {
+    global_data = {
         'time': data.updateTime,
-        'name': '美国',
+        'name': '全球',
         'data': {
             'confirm': data.confirm,
             'heal': data.heal,
@@ -119,7 +123,30 @@ def forecast():
             'nowConfirm': data.nowConfirm
         }
     }
-    return render_template('dashboard/forecast.html', data=statis_data, u=user, name='美国')
+    return render_template('dashboard/forecast.html', data=global_data, u=user, type='Global')
+
+
+@main.route('/forecast/<string:type>')
+def forecast_detail(type):
+    # 支持两种预测：China/Global,首页显示Global
+    user = current_user()
+    if type == 'Global':
+        return redirect('.forcast')
+    elif type == 'China':
+        data = ChinaStatus().one(province='all')
+        china_data = {
+            'time': data.updateTime,
+            'name': '中国',
+            'data': {
+                'confirm': data.confirm,
+                'heal': data.heal,
+                'dead': data.dead,
+                'nowConfirm': data.nowConfirm
+            }
+        }
+        return render_template('dashboard/maps.html', data=china_data, u=user, type='China')
+    else:
+        print("no such forecast type")
 
 
 @main.route('/maps')
@@ -156,3 +183,42 @@ def getMapData():
             continue
         results.append({'name': pro_infos.province, 'value': pro_infos.nowConfirm})
     return jsonify({"data": results})
+
+
+@main.route('/lineChartData', methods=['POST'])
+def getLineData():
+    type = request.form["type"]
+    his_infos = []
+    forecast_infos = []
+    date_row = ['type']
+    heal_row = ['heal']
+    dead_row = ['dead']
+    confirm_row = ['confirm']
+    new_row = ['newAddConfirm']
+    now_row = ['nowConfirm']
+    import_row = ['imporedCase']
+    if type == 'China':  # 国内疫情预测
+        history = ChinaHistory.all()
+        for daily_infos in history[:-2]:  # 最后一天不做为画图项
+            date_row.append(daily_infos.date)
+            heal_row.append(daily_infos.heal)
+            dead_row.append(daily_infos.dead)
+            confirm_row.append(daily_infos.confirm)
+            now_row.append(daily_infos.nowConfirm)
+            import_row.append(daily_infos.importedCase)
+        his_infos = [date_row, heal_row, dead_row, confirm_row, now_row, import_row]
+    elif type == 'Global':  # 世界疫情预测
+        history = GlobalHistory.all()
+        for daily_infos in history[:-2]:
+            date_row.append(daily_infos.date)
+            heal_row.append(daily_infos.heal)
+            dead_row.append(daily_infos.dead)
+            confirm_row.append(daily_infos.confirm)
+            new_row.append(daily_infos.newAddConfirm)
+        his_infos = [date_row, heal_row, dead_row, confirm_row, new_row]
+    else:
+        pro_info_list = []
+    return jsonify({
+        "history": his_infos,
+        "forecast": forecast_infos
+    })

@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f9ddee9e-09b9-4d99-941d-43e28fb597f7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/CovidView.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CovidView.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/c_history.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/g_history.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_init_prog/china_history_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/db_init_prog/china_history_spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_init_prog/global_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/db_init_prog/global_spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_init_prog/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/db_init_prog/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/dashboard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/chart_control.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/chart_control.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/dashboard/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard/forecast.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard/forecast.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/dashboard/maps.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard/maps.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dashboard/statis.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard/statis.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/leftbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/leftbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,38 +72,10 @@
         <option value="Flask Main" />
         <option value="CSS File" />
         <option value="HTML File" />
-        <option value="Python Script" />
         <option value="JavaScript File" />
+        <option value="Python Script" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>db.session</find>
-      <find>Session</find>
-      <find>column_name</find>
-      <find>user</find>
-      <find>current</find>
-      <find>one</find>
-      <find>nav-item</find>
-      <find>user.index</find>
-      <find>user_index</find>
-      <find>log</find>
-      <find>tojson</find>
-      <find>create_Tie</find>
-      <find>list</find>
-      <find>u</find>
-      <find>map</find>
-      <find>pie</find>
-      <find>requets</find>
-      <find>sender</find>
-      <find>Pie</find>
-      <find>has_k</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>Session</replace>
-      <replace>sessionTemp</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -210,7 +202,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python">
       <module name="CovidView" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -278,14 +270,13 @@
       <item itemvalue="Flask server.CovidView" />
       <item itemvalue="Python.apis" />
       <item itemvalue="Python.news_spider" />
+      <item itemvalue="Python.main" />
       <item itemvalue="Python.china_status_spider" />
       <item itemvalue="Python.global_spider" />
       <item itemvalue="Python.china_history_spider" />
-      <item itemvalue="Python.main" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.china_history_spider" />
         <item itemvalue="Python.global_spider" />
         <item itemvalue="Python.china_status_spider" />
@@ -317,6 +308,7 @@
       <workItem from="1587604711830" duration="1556000" />
       <workItem from="1587606617410" duration="100000" />
       <workItem from="1587606845178" duration="9026000" />
+      <workItem from="1587718397160" duration="10507000" />
     </task>
     <servers />
   </component>
@@ -332,42 +324,54 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="656" y="123" key="#CovidView" timestamp="1587606943982">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="123" key="#CovidView/0.0.1920.1040@0.0.1920.1040" timestamp="1587606943982" />
-    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587607161004">
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587830116928">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587607161004" />
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587830116928" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1587607153995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1587607153995" />
-    <state width="1876" height="254" key="GridCell.Tab.0.bottom" timestamp="1587635008121">
+    <state width="900" height="254" key="GridCell.Tab.0.bottom" timestamp="1587832580312">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587635008121" />
-    <state width="1876" height="254" key="GridCell.Tab.0.center" timestamp="1587635008121">
+    <state width="900" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587832580312" />
+    <state width="900" height="254" key="GridCell.Tab.0.center" timestamp="1587832580312">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="254" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587635008121" />
-    <state width="1876" height="254" key="GridCell.Tab.0.left" timestamp="1587635008121">
+    <state width="900" height="254" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587832580312" />
+    <state width="900" height="254" key="GridCell.Tab.0.left" timestamp="1587832580311">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="254" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587635008121" />
-    <state width="1876" height="254" key="GridCell.Tab.0.right" timestamp="1587635008121">
+    <state width="900" height="254" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587832580311" />
+    <state width="900" height="254" key="GridCell.Tab.0.right" timestamp="1587832580312">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="254" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587635008121" />
+    <state width="900" height="254" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587832580312" />
     <state x="461" y="151" key="SettingsEditor" timestamp="1587604949747">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="151" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587604949747" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CovidView$CovidView.coverage" NAME="CovidView Coverage Results" MODIFIED="1587632604870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CovidView$main.coverage" NAME="main Coverage Results" MODIFIED="1587830125700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_init_prog" />
+    <SUITE FILE_PATH="coverage/CovidView$CovidView.coverage" NAME="CovidView Coverage Results" MODIFIED="1587832580269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="masterDetails">
     <states>

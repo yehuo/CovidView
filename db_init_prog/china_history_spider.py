@@ -9,6 +9,12 @@ from db_init_prog.config import get_conn, close_conn, APIs
 from datetime import datetime
 
 
+def date_phrase(date_string):
+    date_string = '2020-' + date_string
+    date_string = date_string.replace('.', '-')
+    return date_string
+
+
 def get_china_history():
     url = APIs['history']
     r = requests.get(url)
@@ -20,7 +26,8 @@ def get_china_history():
     for daily_infos in data_history:
         ts = time.strftime("%Y-%m-%d %X")
         details.append(
-            (ts, ts, daily_infos['date'], daily_infos['confirm'], daily_infos['suspect'], daily_infos['dead'],
+            (ts, ts, date_phrase(daily_infos['date']), daily_infos['confirm'], daily_infos['suspect'],
+             daily_infos['dead'],
              daily_infos['heal'], daily_infos['nowConfirm'], daily_infos['importedCase'], daily_infos['healRate'],
              daily_infos['deadRate']))
         # updateTime,createTime,date,confirm,suspect,dead,heal,nowConfirm,importedCase,healRate,deadRate

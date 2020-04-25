@@ -9,6 +9,12 @@ from db_init_prog.config import get_conn, close_conn, APIs
 from datetime import datetime
 
 
+def date_phrase(date_string):
+    date_string = '2020-' + date_string
+    date_string = date_string.replace('.', '-')
+    return date_string
+
+
 def get_global_status():
     url = APIs['foreign']
     r = requests.get(url)
@@ -44,8 +50,8 @@ def get_global_status():
     ts = time.strftime("%Y-%m-%d %X")
     for daily_info in data_history:
         daily_details = daily_info['all']
-        history.append((update_time, ts, daily_info['date'], str(daily_details['confirm']), str(daily_details['dead']),
-                        str(daily_details['heal']), str(daily_details['newAddConfirm']),
+        history.append((update_time, ts, date_phrase(daily_info['date']), str(daily_details['confirm']),
+                        str(daily_details['dead']), str(daily_details['heal']), str(daily_details['newAddConfirm']),
                         float(daily_details['deadRate']), float(daily_details['healRate'])))
         # updateTime,date,confirm,dead,heal,newAddConfirm,deadRate,healRate
 

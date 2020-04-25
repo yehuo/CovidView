@@ -1,36 +1,86 @@
 {% extends "./dashboard/base.html" %}
 
 {% block title %}
-    <title>
-        Dashboard | {{ kind }}
-    </title>
+<title>
+	Dashboard | {{ kind }}
+</title>
 {% endblock %}
 
 {% block statisblock %}
-    <div>
-        <div class="confirm">
-            <label>现有确诊：</label>
-            <p>{{ d.confirm }}</p>
-        </div>
-        <div class="suspect">
-            <label>现有疑似：</label>
-            <p>{{ d.suspect }}</p>
-        </div>
-        <div class="dead">
-            <label>累计死亡：</label>
-            <p>{{ d.dead }}</p>
-        </div>
-        <div class="heal">
-            <label>累计治愈：</label>
-            <p>{{ d.heal }}</p>
-        </div>
-    </div>
+<div>
+	<div class="confirm">
+		<label>累计确诊：</label>
+		<p>{{ data.confirm }}</p>
+	</div>
+	<div class="suspect">
+		<label>现有确诊：</label>
+		<p>{{ data.nowConfirm }}</p>
+	</div>
+
+	<div class="dead">
+		<label>累计死亡：</label>
+		<p>{{ data.dead }}</p>
+	</div>
+	<div class="heal">
+		<label>累计治愈：</label>
+		<p>{{ data.heal }}</p>
+	</div>
+</div>
 {% endblock %}
 
 {% block viewblock %}
-    <div id="forecast-table" class="col-8 bg-secondary"></div>
-    <script type="text/javascript">
-        var data = '{{ d }}'
-        alert(data)
-    </script>
+<div id="chart-line" class="col-8 bg-secondary" style="height: 600px;"></div>
+<div id="chart-table" class="col-4 bg-secondary"></div>
+<script type="text/javascript">
+	$.post("/dashboard/lineChartData", {
+		"type": '{{ type }}'
+	}, function(data) {
+		line_chart = echarts.init(document.getElementById('chart-line'));
+		line_chart_option = {
+			title: {
+				text: '疫情趋势变化图'
+			},
+			tooltip: {
+				trigger: 'axis',
+				axisPointer: {
+					type: 'cross',
+					label: {
+						backgroundColor: '#6a7985'
+					}
+				}
+			},
+			legend: {
+				data: ['邮件营销', '联盟广告', '视频广告', '直接访问', '搜索引擎']
+			},
+			toolbox: {
+				feature: {
+					saveAsImage: {}
+				}
+			},
+			grid: {
+				left: '3%',
+				right: '4%',
+				bottom: '3%',
+				containLabel: true
+			},
+			dataset:{
+				source:data.history
+			},
+			xAxis: {
+				type: 'category',
+			},
+			yAxis: {
+				gridIndex:0
+			},
+			series: [
+				{type: 'line', smooth: true, seriesLayoutBy: 'row'},
+                {type: 'line', smooth: true, seriesLayoutBy: 'row'},
+                {type: 'line', smooth: true, seriesLayoutBy: 'row'},
+                {type: 'line', smooth: true, seriesLayoutBy: 'row'},
+			]
+		};
+		line_chart.setOption(line_chart_option);
+
+	})
+</script>
 {% endblock %}

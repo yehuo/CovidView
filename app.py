@@ -53,6 +53,7 @@ def register_routes(app):
     app.register_blueprint(user_route, url_prefix='/user')
     app.register_blueprint(board_route, url_prefix='/board')
     app.register_blueprint(message_route, url_prefix='/message')
+    app.register_blueprint(reply_route, url_prefix='/reply')
 
 
 def configured_app():

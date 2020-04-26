@@ -36,12 +36,7 @@ def index():
     u = current_user()
     message = Messages.all(receiver_id=u.id, type='reply')
     print('message', message)
-    t = render_template(
-        'message/center.html',
-        user=u,
-        received=message
-    )
-    return t
+    return render_template('message/center.html', u=u, received=message)
 
 
 @main.route('/at')
@@ -49,23 +44,12 @@ def index():
 def at():
     u = current_user()
     message = Messages.all(receiver_id=u.id, type='at')
-    t = render_template(
-        'message/at.html',
-        user=u,
-        received=message
-    )
-    return t
+    return render_template('message/at.html', u=u, received=message)
 
 
-@main.route('/collect')
+@main.route('/collected')
 @login_required
-def collect():
-    # 消息中心页面：收到的收藏
+def collected():
     u = current_user()
     message = Messages.all(receiver_id=u.id, type='collect')
-    t = render_template(
-        'message/collected.html',
-        user=u,
-        received=message
-    )
-    return t
+    return render_template('message/collected.html',u=u,received=message)

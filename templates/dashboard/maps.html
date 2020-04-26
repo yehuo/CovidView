@@ -10,23 +10,23 @@
 <div id="statis-blocks" class="col-12 row justify-content-around my-2">
 	<div class="confirm view-block px-3">
 		<label>现有确诊：</label>
-		<p>{{ data.confirm }}</p>
-		<p>更新时间：{{ data.time }}</p>
+		<p>{{ data['data']['nowConfirm'] }}</p>
+		<p>更新时间：{{ data['time'] }}</p>
 	</div>
 	<div class="suspect view-block px-3">
 		<label>现有疑似：</label>
-		<p>{{ data.suspect }}</p>
-		<p>更新时间：{{ data.time }}</p>
+		<p>{{ data['data']['suspect'] }}</p>
+		<p>更新时间：{{ data['time'] }}</p>
 	</div>
 	<div class="dead view-block px-3">
 		<label>累计死亡：</label>
-		<p>{{ data.dead }}</p>
-		<p>更新时间：{{ data.time }}</p>
+		<p>{{ data['data']['dead'] }}</p>
+		<p>更新时间：{{ data['time'] }}</p>
 	</div>
 	<div class="heal view-block px-3">
 		<label>累计治愈：</label>
-		<p>{{ data.heal }}</p>
-		<p>更新时间：{{ data.time }}</p>
+		<p>{{ data['data']['heal'] }}</p>
+		<p>更新时间：{{ data['time'] }}</p>
 	</div>
 </div>
 {% endblock %}

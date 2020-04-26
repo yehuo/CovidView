@@ -1,42 +1,51 @@
-.user-img{
-	height: 55px;
-	width: 55px;
+#mid-bg{
+	position: fixed;
+	top: 45px;
+	left: 0px;
+	height: 529px;
+	width: 100%;
+	background-color:#717af1 ;
 }
-.logo {
-    font-weight: bolder;
-    font-family: Castellar;
-    font-style: italic;
-    font-size: 20px;
-
+#logo{
+	font-weight: 150;
+	font-family: castellar;
+	font-weight: bold;
+	font-style: italic;
+	padding-top: 10px;
+	color: #000000;
 }
-
-#statis-blocks .view-block {
-    border-radius: 10px;
-    color: #ffffff;
-    width: 20%;
+.navbar-brand{
+	font-size: 28px;
 }
-
-#statis-blocks div {
-    color: white;
+#header-nav{
+	background-color:#00cccc ;
 }
-
-.view-block label {
-    color: white;
+.sidebar{
+	position: fixed;
+	height: 100%;
+	padding: 68px 0px 0px 0px;
 }
-
-#statis-blocks .heal {
-    background-color: #009966;
+.sidebar-sticky{
+	position: sticky;
+	padding-top: .5rem;
+	
 }
-
-.confirm {
-    background-color: #fe4066;
+.sidebar-heading{
+	text-transform: uppercase;
 }
-
-
-.suspect {
-    background-color: #ee9940;
+.sidebar-spliter{
+	
 }
-
-.dead {
-    background-color: #000000;
+#l-bar{
+	padding: 0px;
+}
+#main{
+	padding: 68px 0px 0px 0px;
+}
+a.nav-link{
+	font-size: 18px;
+	color: #949494;
+}
+a.nav-link i{
+	margin-right: 16px;
 }

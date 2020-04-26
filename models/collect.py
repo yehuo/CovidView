@@ -19,5 +19,5 @@ class Collect(SQLMixin, db.Model):
     @classmethod
     def new(cls, form, user_id):
         form['user_id'] = user_id
-        l = super().new(form)
-        return l
+        collect= cls.new(form)
+        return collect

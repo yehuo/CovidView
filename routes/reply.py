@@ -18,7 +18,6 @@ main = Blueprint('reply', __name__)
 def users_from_content(content):
     parts = content.split()
     users = []
-
     for p in parts:
         if p.startswith('@'):
             username = p[1:]
@@ -26,7 +25,6 @@ def users_from_content(content):
             print('users_from_content <{}> <{}> <{}>'.format(username, p, parts))
             if u is not None:
                 users.append(u)
-
     return users
 
 

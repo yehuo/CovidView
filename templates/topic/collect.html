@@ -1,10 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'topic/base.html' %}
+{% block title %}
+<title>
+	Topic | index
+</title>
+{% endblock %}
 
-</body>
-</html>
+{% block topicList %}
+<div class="panel col-12">
+	<div id="topic-list">
+		{% for t in ms %}
+		{% set u = t.user() %}
+		{# 用户头像#}
+		<div class="card mb-3">
+			<div class="card-header">
+				<a class="topic_title" href="{{ url_for('topic.detail', id=t.id) }}">
+					{% if t.title == '' %}
+					无标题
+					{% else %}
+					{{ t.title }}
+					{% endif %}
+				</a>
+			</div>
+			<div class="card-body row">
+				<div class="col-1 p-0">
+					<a class="user_avatar mt-2" href="{{ url_for('user.index', id=t.user_id) }}">
+						<img style="width: 100%;" src="{{ u.img }}">
+					</a>
+				</div>
+				<div class="col-11">
+					<h5 class="card-title">
+						<a class="topic_title" href="{{ url_for('topic.detail', id=t.id) }}">
+							{% if t.title == '' %}
+							无标题
+							{% else %}
+							{{ t.title }}
+							{% endif %}
+						</a>
+					</h5>
+					<p class="card-text">
+						{{ t.content | truncate(300) }}
+					</p>
+				</div>
+			</div>
+			<div class="card-footer text-muted">
+				<span class="topic-from pull-right ml-2">
+					来自 <a href="{{ url_for('user.index', id=t.user_id) }}">{{ u.username }}</a>
+				</span>
+				<span class="counts pull-right">
+					<span class="count_of_replies" title="回复数">{{ t.replies() | count }}</span>
+					<span class="count_seperator">/</span>
+					<span class="count_of_visits" title="点击数">{{ t.views }}</span>
+				</span>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+</div>
+{% endblock %}

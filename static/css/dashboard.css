@@ -1,0 +1,53 @@
+body{
+	background-color: white;
+}
+.user-img{
+	height: 55px;
+	width: 55px;
+}
+.logo {
+    font-weight: bolder;
+    font-family: Castellar;
+    font-style: italic;
+    font-size: 20px;
+
+}
+
+#statis-blocks .view-block {
+    border-radius: 10px;
+    color: #ffffff;
+    width: 20%;
+}
+
+#statis-blocks div {
+    color: white;
+}
+
+.view-block label {
+    color: white;
+}
+
+#statis-blocks .heal {
+    background-color: #009966;
+}
+
+.confirm {
+    background-color: #fe4066;
+}
+
+
+.suspect {
+    background-color: #ee9940;
+}
+
+.dead {
+    background-color: #000000;
+}
+#dashboard_back_mid{
+	position: absolute;
+	top:0px;
+	left: 0px;
+	width: 100%;
+	height: 420px;
+	background-color: #717af1;
+}

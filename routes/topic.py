@@ -30,20 +30,20 @@ def index():
     return render_template("topic/index.html", u=u, ms=ms, bs=bs, bid=board_id, token=token)
 
 
-@main.route('/<int:id>')
+@main.route('/<int:id>')  # 查看某个topic的内容
 def detail(id):
     m = Topic.get(id)
     u = current_user()
-    l = Collect.one(topic_id=m.id, user_id=u.id)
-    return render_template("topic/detail.html", topic=m, user=u, l=l)
+    l = Collect.one(topic_id=m.id)
+    return render_template("topic/detail.html", topic=m, u=u, l=l)
 
 
-@main.route('/<int:id>/collect')
-def detail_collect(id):
+@main.route('/collect/<int:id>')
+def collect_detail(id):
     m = Topic.get(id)
     u = current_user()
     l = Collect.one(topic_id=m.id, user_id=u.id)
-    return render_template("topic/collect.html", topic=m, user=u, l=l)
+    return render_template("topic/collect.html", topic=m, u=u, l=l)
 
 
 @main.route("/delete")

@@ -7,30 +7,34 @@
 {% endblock %}
 
 {% block statisblock %}
-<div>
-	<div class="confirm">
+<div id="statis-blocks" class="row w-100 justify-content-around my-2">
+	<div class="confirm view-block px-3">
 		<label>累计确诊：</label>
-		<p>{{ data.confirm }}</p>
+		<p>{{ data['data']['confirm'] }}</p>
+		<p>更新时间：{{ data['time'] }}</p>
 	</div>
-	<div class="suspect">
+	<div class="suspect view-block px-3">
 		<label>现有确诊：</label>
-		<p>{{ data.nowConfirm }}</p>
+		<p>{{ data['data']['nowConfirm'] }}</p>
+		<p>更新时间：{{ data['time'] }}</p>
 	</div>
 
-	<div class="dead">
+	<div class="dead view-block px-3">
 		<label>累计死亡：</label>
-		<p>{{ data.dead }}</p>
+		<p>{{ data['data']['dead'] }}</p>
+		<p>更新时间：{{ data['time'] }}</p>
 	</div>
-	<div class="heal">
+	<div class="heal view-block px-3">
 		<label>累计治愈：</label>
-		<p>{{ data.heal }}</p>
+		<p>{{ data['data']['heal'] }}</p>
+		<p>更新时间：{{ data['time'] }}</p>
 	</div>
 </div>
 {% endblock %}
 
 {% block viewblock %}
-<div id="chart-line" class="col-8 bg-secondary" style="height: 600px;"></div>
-<div id="chart-table" class="col-4 bg-secondary"></div>
+<div id="chart-line" class="col-8 m-0" style="height: 600px;"></div>
+<div id="chart-table" class="col-4"></div>
 <script type="text/javascript">
 	$.post("/dashboard/lineChartData", {
 		"type": '{{ type }}'
@@ -49,19 +53,14 @@
 					}
 				}
 			},
-			legend: {
-				data: ['邮件营销', '联盟广告', '视频广告', '直接访问', '搜索引擎']
-			},
-			toolbox: {
-				feature: {
-					saveAsImage: {}
-				}
-			},
 			grid: {
-				left: '3%',
-				right: '4%',
-				bottom: '3%',
+				left: '5%',
+				left: '5%',
+				bottom: '5%',
 				containLabel: true
+			},
+			legend:{
+				data:['heal','dead','newAddConfirm','confirm']
 			},
 			dataset:{
 				source:data.history

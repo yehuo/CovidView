@@ -33,8 +33,32 @@
 {% endblock %}
 
 {% block viewblock %}
-<div id="chart-line" class="col-8 m-0" style="height: 600px;"></div>
-<div id="chart-table" class="col-4"></div>
+<div id="chart-line-container" class="col-12">
+	<div id="chart-line" style="height: 400px">
+		
+	</div>
+</div>
+<!-- <div id="chart-table" class="col-12">
+	<table class="table">
+	  <thead>
+	    <tr>
+	      <th scope="col">#</th>
+	      <th scope="col">First</th>
+	      <th scope="col">Last</th>
+	      <th scope="col">Handle</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	{% for daily_info in forecast_infos %}
+		<tr>
+	      <th scope="row">1</th>
+	      <td>Mark</td>
+	      <td>Otto</td>
+	      <td>@mdo</td>
+	    </tr>
+	{% endfor %}
+	</tbody>
+</div> -->
 <script type="text/javascript">
 	$.post("/dashboard/lineChartData", {
 		"type": '{{ type }}'
@@ -67,6 +91,9 @@
 			},
 			xAxis: {
 				type: 'category',
+				axisLabel:{
+					'rotate':40
+				}
 			},
 			yAxis: {
 				gridIndex:0
@@ -79,7 +106,6 @@
 			]
 		};
 		line_chart.setOption(line_chart_option);
-
 	})
 </script>
 {% endblock %}

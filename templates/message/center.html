@@ -7,11 +7,9 @@
 		document.querySelector("#dashboard-sidebar-pagelist > li:nth-child(1)").active = true;)
 </script>
 <div class="space-right">
-	<p>回复我的：</p>
 	{% if received == [] %}
-	<div class="reply-card">
-		<b><img class="none" src="/images/none.jpg" /></b>
-		<p class="p-none">暂时没有哦~</p>
+	<div class="card mx-auto mt-3" style="width:30%">
+		<p class="m-auto text-"><i class="fa fa-envelope-open mr-2"></i>暂时没有人回复你哦~</p>
 	</div>
 	{% else %}
 	{% for r in received %}

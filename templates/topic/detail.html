@@ -1,58 +1,58 @@
 {% extends 'topic/base.html' %}
 {% block details %}
-<div class="panel">
-	<div class="header topic-header">
-		<div class="title">
-		{{ topic.title }}
+{% set author = topic.user() %}
+<div class="panel col-12">
+	<div class="media bg-light ml-auto mr-5 detail-block">
+		<div class="user-img">
+			<a href="{{ url_for('user.index', id=u.id) }}">
+				<img src="{{ author.img }}" class="rounded-circle"/>
+			</a>	
 		</div>
-		<div class="topic-infos">
-		{% set author = topic.user() %}
-		{{ author.username }}发布于{{ topic.createTime }} | 获 {{ topic.views }} 次浏览
-		</div>
-	</div>
-	<div class="inner">
-		{{ topic.content }}
-	</div>
-	<div class="replylist">
-		<!-- 显示以往回复 -->
-		{% for r in topic.replies() %}
-		{% set u = r.user() %}
-		<div class='cell reply_area reply_item'>
-			<div class='author_content'>
+		<div class="media-body main-item">
+			<h5>{{ topic.title }}</h5>
+			<p class="text-muted main-item-info">用户{{ author.username }}发布于 <span class="time-string">{{ topic.createTime }}</span> • 获 {{ topic.views }} 次浏览</p>
+			<!-- 帖子正文内容 -->
+			<p>{{ topic.content }}</p>
+			<!-- 显示以往回复 -->
+			<hr class="simple mr-3"></hr>
+			{% for r in topic.replies() %}
+			{% set u = r.user() %}
+
+			<div class='media mt-3 reply-item'>
+				<!-- 回复贴的用户头像 -->
 				<div class="user-img">
 					<a href="{{ url_for('user.index', id=u.id) }}">
-						<img src="{{ u.img }}">
+						<img src="{{ u.img }}" class="rounded-circle">
 					</a>
 				</div>
-				<div class='user_info'>
-					<a class='dark reply_author' href="{{ url_for('user.index', id=u.id) }}">
-						{{ u.username }}
-					</a>
-					<a class="reply-time">
-						{# {{ loop.index }}楼 / {{ loop.length }}楼 •#}
-						<span class="niku-time" id="{{ r.ct }}">
-							{{ r.created_time | formatte_time }}</span>
-					</a>
+				<!-- 回复贴的文字内容 -->
+				<div class="media-body reply-item">
+					<p class="text-muted reply-item-info">用户 
+						<a class='dark reply_author' href="{{ url_for('user.index', id=u.id) }}">
+							{{ u.username }}
+						</a> 回复：
+					</p>
+					<div class='reply_content'>
+						<div class="markdown-text">{{ r.content | safe_str }}</div>
+					</div>
+					<div class='reply-item-footer pull-right mr-5'>
+						<span class="time-string" id="{{ r.createTime }}">
+							发布于{{ r.createTime | formatte_time }} • </span>
+						{{ loop.index }}楼 / {{ loop.length }}楼
+					</div>
+				
 				</div>
 			</div>
-			<div class='reply_content'>
-				<div class="markdown-text">{{ r.content | safe_str }}</div>
-			</div>
+			{% endfor %}
 		</div>
-		{% endfor %}
 	</div>
 </div>
-<div class="panel comment-send cell">
+<div class="panel col-12">
 	<!-- 添加新回复 -->
-	<div class="user-img">
-		<img class="user-head" src="{{ u.img }}">
-	</div>
-	<div>
-		<form action="{{ url_for('reply.add') }}" method="post">
+		<form action="{{ url_for('reply.add') }}" method="post" class="col-12 ml-auto mr-5 bg-secondary px-3 py-3 addon-block row justify-content-around">
 			<input type="hidden" name="topic_id" value="{{ topic.id }}">
-			<textarea name="content" class="add-reply" placeholder="请自觉遵守互联网相关的政策法规，严禁发布色情、暴力、反动的言论。"></textarea>
-			<button class="comment-submit">添加回复</button>
+			<textarea name="content" class="add-reply col-10" placeholder="请自觉遵守互联网相关的政策法规，严禁发布色情、暴力、反动的言论。"></textarea>
+			<button class="comment-submit col-1">添加回复</button>
 		</form>
-	</div>
 </div>
 {% endblock %}

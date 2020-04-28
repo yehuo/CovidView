@@ -33,7 +33,7 @@ def csrf_required(f):
         token = request.args['token']
         u = current_user()
         t = Token.one(token=token)
-        if token == t.token and t.user_id == u.id:
+        if token == t.token and t.userID == u.id:
             Token.delete(t.id)
             return f(*args, **kwargs)
         else:

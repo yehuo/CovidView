@@ -61,7 +61,7 @@ def new():
     bs = Board.all()
     user = current_user()
     token = new_csrf_token()
-    return render_template("topic/new.html", bs=bs, bid=board_id, user=user, token=token)
+    return render_template("topic/new.html", bs=bs, bid=board_id, u=user, token=token)
 
 
 @main.route("/add", methods=["POST"])

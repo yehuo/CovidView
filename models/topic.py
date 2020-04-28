@@ -20,7 +20,7 @@ class Topic(SQLMixin, db.Model):
 
     @classmethod
     def new(cls, form, user_id):
-        form['userID'] = user_id
+        form['user_id'] = user_id
         m = super().new(form)
         return m
 

@@ -1,0 +1,32 @@
+.bg-img{
+	position: absolute;
+	left: 14%;
+	margin-left: auto;
+	width:86%;
+	height: 34%;
+	background: url("/images/mountains.jpg") no-repeat;
+	background-size: 100% 100%;
+}
+#head-infos{
+	margin-left: 25px;
+}
+.profile-title{
+	color: white;
+	margin-top: 20px;
+	font-family: arial;
+	font-style: bolder;
+	font-size: 19px;
+}
+.hello-title{
+	color: white;
+	margin-top:25px;
+	margin-bottom: 25px;
+	font-family: arial;
+	font-style: bold;
+	font-size: 44px;
+
+}
+.sub-title{
+	color: white;
+	font-size:14px;
+}

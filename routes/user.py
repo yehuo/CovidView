@@ -31,7 +31,7 @@ def index():
         topic = Topic.one(id=i.topic_id)
         if topic is not None:
             topic_set.add(topic)
-    return render_template("user/index.html", user=user, other=other, ms=ms, ts=topic_set, m=None)
+    return render_template("user/index.html", u=user, other=other, ms=ms, ts=topic_set, m=None)
 
 
 @main.route('/edit/<int:id>')

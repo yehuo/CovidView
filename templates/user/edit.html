@@ -2,35 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="/static/images/bitbug_favicon%20.ico" type="image/x-icon"/>
-    {#    todo:修改页面栏logo#}
-    <title>CovidView | @{{ user.username }} 设置</title>
+    <title>CovidView | {{ other.username }} Edit</title>
     <link rel="stylesheet" href="/static/css/edit.css">
 </head>
 <body>
+<div class="row">
+    <div class="col-2">
+        {% include 'leftbar.html' %}
+    </div>
+    <div class="col-10">
+        <div>USER PROFILE</div>
+        <div>Hello,{{ user.username }}</div>
+        <div>本页为用户信息页，您可以在此更改密码或调整信息</div>
+        <div class="row">
+            <div class="col-8 card">
+                {% block l-card %}
+            </div>
 
-<div class="navbar">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="brand" href="{{ url_for('topic.index', id=user.id ) }}">
-                <img src="/images/title.png">
-            </a>
-            <ul class="nav pull-right">
-                <li><a href="{{ url_for('topic.index', id=user.id) }}">首页</a></li>
-                <li><a href="{{ url_for('message.index') }}">消息</a></li>
-                <li><a href="{{ url_for('user.edit', id=user.id) }}">设置</a></li>
-                <li><a href="{{ url_for('index.quit') }}" rel="nofollow">退出</a></li>
-            </ul>
-            <a class="btn btn-navbar" id="responsive-sidebar-trigger">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
+            <div class="col-4 card">
+                {% block r-card %}
+            </div>
         </div>
     </div>
 </div>
 <div id="main">
     <div id="sidebar">
+		<!-- 左侧用户信息展板 -->
         <div class="panel" style="margin-bottom: 0">
             <div class="header">
                 <span class="col_fade">个人信息</span>
@@ -38,26 +35,25 @@
             <div class="inner">
                 <div class="user_card">
                     <div>
-                        <a class="user_avatar" href="{{ url_for('user.index', id=user.id) }}">
-                            <img src="{{ user.img }}" title="{{ user.username }}">
+                        <a class="user_avatar" href="{{ url_for('user_index.index', id=other.id) }}">
+                            <img src="{{ other.img }}" title="{{ other.username }}">
                         </a>
                         <span class="user_name">
-                            <a class="auther-name"
-                               href="{{ url_for('user.index', id=user.id) }}">{{ user.username }}</a></span>
-
+							<a class="dark" href="{{ url_for('user_index.index', id=other.id) }}">{{ other.username }}</a>
+						</span>
                         <div class="space clearfix"></div>
-                        <span class="signature">
-    “
-
-        {{ user.signature }}
-
-    ”
-</span>
-                    </div>
+							{% if user.signature == None %}
+								<span class="signature">“这家伙很懒，什么个性签名都没有留下。”</span>
+							{% elif (user.signature | count) == 0 %}
+								<span class="signature">“这家伙很懒，什么个性签名都没有留下。”</span>
+							{% else %}
+								<span class="signature">“{{ user.signature }}”</span>
+							{% endif %}
+						</div>
                 </div>
-
             </div>
         </div>
+		<!-- 右侧话题发布展板 -->
         <div class="panel">
             <div class="inner">
                 <a href="{{ url_for('topic.new', board_id=-1) }}" class="create_topic_btn">
@@ -71,109 +67,147 @@
             <div class="header">
                 <ul class="breadcrumb">
                     <li><a href="{{ url_for('topic.index', id=user.id) }}">主页</a><span class="divider">/</span></li>
-                    <li class="active">设置</li>
                 </ul>
             </div>
-            <div class="inner">
-                {% if m == 'f' %}
-                    <div class="alert alert-fail">
-                        <strong>保存失败。请检查账号或密码长度是否正确，密码是否输入正确</strong>
-                    </div>
-                {% elif m == 't' %}
-                    <div class="alert alert-success">
-                        <strong>保存成功。</strong>
-                    </div>
-                {% elif m== 'already' %}
-                    <div class="alert alert-fail">
-                        <strong>保存失败。该用户名已存在</strong>
-                    </div>
-                {% endif %}
-                <form id="setting_form" class="form-horizontal" action="{{ url_for('user.photo') }}" method="post"
-                      enctype="multipart/form-data">
-                    <div class="control-group">
-                        <label class="control-label" for="name">头像</label>
-                        <div class="controls">
-                            <img src="{{ user.img }}" title="{{ user.username }}" width="200px" height="200px">
-                        </div>
-                        <div class="form-actions">
-                            <span class="fileinput-button">
-                                <input type="file" size="30" name="photo"/>
-                                <input type="submit" value="提交信息" class="button-new" style="margin-top:15px;"/>
-                            </span>
-                        </div>
-                    </div>
-                </form>
-                <form id="setting_form" class="form-horizontal" action="{{ url_for('user.update') }}"
-                      method="post">
-                    <input type="hidden" name="id" placeholder="id" value="{{ user.id }}">
-                    <div class="control-group">
-                        <label class="control-label" for="name">用户名</label>
-                        <div class="controls">
-                            <input class="input-xlarge" id="name" name="name" size="30" type="text"
-                                   value="{{ user.username }}">
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="signature">个性签名</label>
-                        <div class="controls">
-                            {% if user.signature == None %}
-                                <textarea class="input-xlarge" id="signature" name="signature"
-                                          size="30"></textarea>
-                            {% else %}
-                                <textarea class="input-xlarge" id="signature" name="signature"
-                                          size="30">{{ user.signature }}</textarea>
-                            {% endif %}
-                        </div>
-                    </div>
-                    <input type="hidden" id="action" name="action" value="change_setting">
-                    <input type="hidden" name="_csrf" value="vaGzX1r6-vuVGBYs_BICwGPA5aEYEGdU1cIY">
-
-                    <div class="form-actions">
-                        <input type="submit" class="span-primary submit_btn" data-loading-text="保存中.." value="保存设置">
-                    </div>
-                </form>
+            <div class="inner userinfo">
+                <div class="user_big_avatar">
+                    <img src="{{ other.img }}" class="user_avatar"
+                         title="{{ other.username }}"/>
+                </div>
+                <div class="user_profile">
+                    <ul class="unstyled">
+                    </ul>
+                </div>
+                <p class="col_fade" id="niku-time" data-created_time="{{ other.created_time }}">注册时间</p>
+                <p class="col_fade">发表过{{ ms | count }}篇文章</p>
             </div>
         </div>
+		
+		<!-- 最近创建的话题 -->
         <div class="panel">
             <div class="header">
-                <span class="col_fade">更改密码</span>
+                <span class="col_fade">最近创建的话题</span>
             </div>
-            <div class="inner">
-                <form id="change_pass_form" class="form-horizontal" action="{{ url_for("user.pass_update") }}"
-                      method="post">
-                    <input type="hidden" name="id" placeholder="id" value="{{ user.id }}">
-                    <div class="control-group">
-                        <label class="control-label" for="old_pass">当前密码</label>
-                        <div class="controls">
-                            <input class="input-xlarge" type="password" id="old_pass" name="old_pass" size="30">
+            {% if (ms | count) == 0 %}
+                <div class="inner">
+                    <p>无话题</p>
+                </div>
+            {% else %}
+                {% for t in ms %}
+                    {% set a = (t.replies() | myfirst) %}
+                    <div class="cell">
+                        <a class="user_avatar pull-left">
+                            <img src="{{ other.img }}" title="{{ other.username }}">
+                        </a>
+                        <span class="reply_count pull-left">
+						<span class="count_of_replies" title="回复数">
+							{{ t.replies() | count }}
+						</span>
+						<span class="count_seperator">/</span>
+						<span class="count_of_visits" title="点击数">
+							{{ t.views }}
+						</span>
+						</span>
+                        <span class="reply_count pull-left"></span>
+                        <a class="last_time pull-right">
+                            {% if a == None %}
+                                <div></div>
+                            {% else %}
+                                {% set u = a.user() %}
+                                <img class="user_small_avatar" src="{{ u.img }}">
+                            {% endif %}
+                            <span class="niku-time" data-created_time="{{ t.updated_time }}"></span>
+                        </a>
+                        <div class="topic_title_wrapper">
+                            <a class="topic_title" href="{{ url_for('topic.detail', id=t.id) }}"
+                               title="{{ t.title }}">
+                                {{ t.title }}
+                            </a>
                         </div>
                     </div>
-                    <div class="control-group">
-                        <label class="control-label" for="new_pass">新密码</label>
-                        <div class="controls">
-                            <input class="input-xlarge" type="password" id="new_pass" name="new_pass" size="30">
-                        </div>
-                    </div>
-                    <input type="hidden" id="action" name="action" value="change_password">
-                    <input type="hidden" name="_csrf" value="vaGzX1r6-vuVGBYs_BICwGPA5aEYEGdU1cIY">
-
-                    <div class="form-actions">
-                        <input type="submit" class="span-primary submit_btn" data-loading-text="更改中.." value="更改密码">
-                    </div>
-                </form>
-            </div>
+                {% endfor %}
+            {% endif %}
         </div>
+		<!-- 最近参与的话题 -->
+        <div class="panel">
+            <div class="header">
+                <span class="col_fade">最近参与的话题</span>
+            </div>
+            {% if (ts | count) == 0 %}
+                <div class="inner">
+                    <p>无话题</p>
+                </div>
+            {% else %}
+                {% for t in ts %}
+                {% set user = t.user() %}
+                <div class="cell">
+                    <a class="user_avatar pull-left" href=" {{ url_for('user_index.index', id=t.id) }} ">
+                        <img src="{{ user.img }}">
+                    </a>
+                    <span class="reply_count pull-left">
+						<span class="count_of_replies" title="回复数">
+						  {{ t.replies() | count }}
+						</span>
+						<span class="count_seperator">/</span>
+						<span class="count_of_visits" title="点击数">
+						  {{ t.views }}
+						</span>
+					</span>
+                    {% set r = t.replies()[0] %}
+                    {% set u = r.user() %}
+                    <a class="last_time pull-right" href="{{ url_for('user_index.index', id=u.id) }}">
+                        <img class="user_small_avatar"
+                             src="{{ u.img }}"/>
+                        <span class="niku-time" data-created_time="{{ t.updated_time }}"></span>
+                    </a>
+                    <div class="topic_title_wrapper">
+                        <a class="topic_title" href="{{ url_for('topic.detail', id=t.id) }}"
+                           title="{{ t.title }}">
+                            {{ t.title }}
+                        </a>
+                    </div>
+                </div>
 
+                {% endfor %}
+            {% endif %}
+        </div>
     </div>
-{#    <div class="back-up"#}
-{#         style='position:fixed;bottom:20px;right: 20px'>#}
-{#        <img src="/images/go_top.png" style="height: 30px;width: 30px">#}
-{#        todo:添加一个返回页面顶端的icon#}
-{#    </div>#}
+	<!-- 背景图片 -->
+	<div class="back-up" style='position:fixed;bottom:20px;right: 20px'>
+        <img src="/images/go_top.png" style="height: 30px;width: 30px">
+    </div>
 </div>
+
 <script>
     var e = function (sel) {
         return document.querySelector(sel)
+    }
+    var es = function (sel) {
+        return document.querySelectorAll(sel)
+    }
+    var registerTimer = function () {
+        setInterval(function () {
+            var times = es('.niku-time')
+            for (var i = 0; i < times.length; i++) {
+                var t = times[i]
+                var time = Number(t.dataset.created_time)
+                var now = Math.floor(new Date() / 1000)
+                var delta = now - time
+                var s = `${delta} 秒前`
+                t.innerText = s
+            }
+        }, 1000)
+        setInterval(function () {
+            var times = es('#niku-time')
+            for (var i = 0; i < times.length; i++) {
+                var t = times[i]
+                var time = Number(t.dataset.created_time)
+                var now = Math.floor(new Date() / 1000)
+                var delta = now - time
+                var s = `注册时间 ${delta} 秒前`
+                t.innerText = s
+            }
+        }, 1000)
     }
     var goTop = function () {
         window.addEventListener('scroll', function () {
@@ -190,10 +224,12 @@
         })
     }
     var __main = function () {
+        registerTimer()
         goTop()
     }
 
     __main()
+
 </script>
 </body>
 </html>

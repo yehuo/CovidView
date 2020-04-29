@@ -32,8 +32,8 @@
 {% endblock %}
 
 {% block viewblock %}
-<div id="chart-l" class="col-8 m-0 p-0" style="height: 600px;"></div>
-<div id="chart-r" class="col-4 m-0 p-0" style="height: 600px;"></div>
+<div id="chart-l" class="col-6 ml-5 mt-5 mr-5 p-0" style="height: 600px;"></div>
+<div id="chart-r" class="col-4 ml-5 mt-5 px-2 py-3" style="height: 600px;"></div>
 <script type="text/javascript">
 	var statis_chart_l = echarts.init(document.getElementById('chart-l'));
 	var statis_chart_r = echarts.init(document.getElementById('chart-r'));
@@ -44,6 +44,11 @@
 			title: {
 				text: '疫情排名前8地区（湖北以外）',
 				subtext: '数据来自丁香园',
+				textStyle:{
+					color:"white"
+				},
+				left:'3%',
+				top:"2%"
 			},
 			tooltip: {
 				trigger: 'axis',
@@ -52,9 +57,15 @@
 				},
 			},
 			legend: {
-				left: 'center',
-				top: 'bottom',
+				left: 'right',
+				top: '2%',
+				textStyle:{
+					color:"white",
+				},
 				data: ['heal', 'dead', 'confirm']
+			},
+			textStyle:{
+				color:"white"
 			},
 			dataset: {
 				source: []
@@ -110,6 +121,7 @@
 				legend: {
 					left: 'center',
 					top: 'bottom',
+					itemWidth:15,	
 					data: data.names
 				},
 				toolbox: {
@@ -139,7 +151,7 @@
 					type: 'pie',
 					radius: [30, 150],
 					center: ['50%', '40%'],
-					roseType: 'area',
+					roseType: 'angle',
 					data: data.data
 				}]
 			};

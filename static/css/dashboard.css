@@ -51,3 +51,15 @@ body{
 	height: 420px;
 	background-color: #717af1;
 }
+#chart-l{
+	background: #211585;
+	border-radius: 20px;
+}
+#chart-r{
+	background: #009999;
+	border-radius: 20px;
+}
+#chart-map{
+	background:#0056B3;
+	border-radius: 20px;
+}

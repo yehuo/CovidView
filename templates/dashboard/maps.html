@@ -32,17 +32,9 @@
 {% endblock %}
 
 {% block viewblock %}
-<div id="chart-map" class="col-12" style="height: 600px;"></div>
+<div id="chart-map" class="col-10 offset-1 mt-5" style="height: 600px;"></div>
 <script type="application/javascript">
 	var ec_center = echarts.init(document.getElementById('chart-map'));
-
-	var mydata = [{
-		'name': '上海',
-		'value': 318
-	}, {
-		'name': '云南',
-		'value': 162
-	}]
 	$.post("/dashboard/mapChartData", {
 			"name": '{{ data.name }}'
 		},

@@ -11,7 +11,7 @@
 		{% for t in ms %}
 		{% set u = t.user() %}
 		{# 用户头像#}
-		<div class="card mb-3">
+		<div class="card mt-3 mr-3">
 			<div class="card-header">
 				<a class="topic_title" href="{{ url_for('topic.detail', id=t.id) }}">
 					{% if t.title == '' %}

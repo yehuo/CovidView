@@ -11,7 +11,7 @@
  Target Server Version : 50726
  File Encoding         : 65001
 
- Date: 29/04/2020 21:19:27
+ Date: 06/05/2020 01:03:25
 */
 
 SET NAMES utf8mb4;
@@ -1988,7 +1988,7 @@ CREATE TABLE `messages`  (
   `receiver_id` int(11) NOT NULL,
   `type` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of messages
@@ -1997,6 +1997,7 @@ INSERT INTO `messages` VALUES (1, '2020-04-26 18:59:33', '2020-04-26 18:59:33', 
 INSERT INTO `messages` VALUES (2, '2020-04-26 18:59:33', '2020-04-26 18:59:33', '42', 'asdaf ', 8, 1, 'reply');
 INSERT INTO `messages` VALUES (3, '2020-04-29 19:38:04', '2020-04-29 19:38:04', '65', 'sad', 8, 1, 'reply');
 INSERT INTO `messages` VALUES (4, '2020-04-29 19:38:04', '2020-04-29 19:38:04', '65', '英雄泪目\r\n', 8, 1, 'reply');
+INSERT INTO `messages` VALUES (5, '2020-05-02 18:33:55', '2020-05-02 18:33:55', '83', '这里是我发布的第一个评论', 8, 8, 'reply');
 
 -- ----------------------------
 -- Table structure for reply
@@ -2010,7 +2011,7 @@ CREATE TABLE `reply`  (
   `topic_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of reply
@@ -2019,6 +2020,7 @@ INSERT INTO `reply` VALUES (1, '2020-04-26 18:59:33', '2020-04-26 18:59:33', 'sd
 INSERT INTO `reply` VALUES (2, '2020-04-26 18:59:33', '2020-04-26 18:59:33', 'asdaf ', 42, 8);
 INSERT INTO `reply` VALUES (3, '2020-04-29 19:38:04', '2020-04-29 19:38:04', 'sad', 65, 8);
 INSERT INTO `reply` VALUES (4, '2020-04-29 19:38:04', '2020-04-29 19:38:04', '英雄泪目\r\n', 65, 8);
+INSERT INTO `reply` VALUES (5, '2020-05-02 18:33:55', '2020-05-02 18:33:55', '这里是我发布的第一个评论', 83, 8);
 
 -- ----------------------------
 -- Table structure for token
@@ -2031,7 +2033,7 @@ CREATE TABLE `token`  (
   `updateTime` datetime(0) NOT NULL,
   `createTime` datetime(0) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 325 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 360 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of token
@@ -2355,6 +2357,39 @@ INSERT INTO `token` VALUES ('ed744177-60ea-4e00-ac44-225bd196bd11', 8, 321, '202
 INSERT INTO `token` VALUES ('77a88561-8d60-4ec2-8d86-383cf5bbebf5', 8, 322, '2020-04-29 19:38:04', '2020-04-29 19:38:04');
 INSERT INTO `token` VALUES ('18686794-66b1-484e-bf80-268cd8643b3c', 8, 323, '2020-04-29 19:38:04', '2020-04-29 19:38:04');
 INSERT INTO `token` VALUES ('c15845a6-e66a-423b-a97b-7fc577e241db', 8, 324, '2020-04-29 19:38:04', '2020-04-29 19:38:04');
+INSERT INTO `token` VALUES ('a9682d9a-ab0f-4978-bfed-5814f2b0f026', 8, 325, '2020-04-29 19:38:04', '2020-04-29 19:38:04');
+INSERT INTO `token` VALUES ('3a19c81c-bb91-4a76-aae4-8b5904592b4e', 8, 326, '2020-04-29 19:38:04', '2020-04-29 19:38:04');
+INSERT INTO `token` VALUES ('ed19344c-b1ba-4375-9efb-8a24e448ceb9', 8, 327, '2020-04-29 19:38:04', '2020-04-29 19:38:04');
+INSERT INTO `token` VALUES ('358f4824-8eba-4cb3-81e5-2a5aea26285f', 8, 328, '2020-04-29 19:38:04', '2020-04-29 19:38:04');
+INSERT INTO `token` VALUES ('ed4a38a3-9d8f-41e7-a3d2-78d38d96ae92', 8, 329, '2020-04-29 19:38:04', '2020-04-29 19:38:04');
+INSERT INTO `token` VALUES ('ba314aa4-ca3a-463c-97f9-a9d806551459', 8, 330, '2020-04-29 19:38:04', '2020-04-29 19:38:04');
+INSERT INTO `token` VALUES ('7ea2e740-5b86-41fa-9f84-51f410f5f1ca', 8, 331, '2020-04-29 19:38:04', '2020-04-29 19:38:04');
+INSERT INTO `token` VALUES ('214465b0-25e7-4863-8a77-4907a733dfe9', 8, 332, '2020-04-29 19:38:04', '2020-04-29 19:38:04');
+INSERT INTO `token` VALUES ('f0b7276f-1213-4c43-a3c6-5ee4779441bc', 8, 333, '2020-04-29 19:38:04', '2020-04-29 19:38:04');
+INSERT INTO `token` VALUES ('62dfe1fa-1eb7-4f4d-8172-484113833183', 8, 334, '2020-04-29 19:38:04', '2020-04-29 19:38:04');
+INSERT INTO `token` VALUES ('2f1c90f4-6a0d-4342-bf1d-2c94b23b6d79', 8, 335, '2020-04-29 19:38:04', '2020-04-29 19:38:04');
+INSERT INTO `token` VALUES ('a28f3d58-bd0d-4ecc-9630-a6cde085b53e', 8, 336, '2020-04-29 19:38:04', '2020-04-29 19:38:04');
+INSERT INTO `token` VALUES ('09559d41-8b06-43e1-9a64-5eba2b2c1e87', 8, 337, '2020-04-29 19:38:04', '2020-04-29 19:38:04');
+INSERT INTO `token` VALUES ('91ed1640-b8c7-42eb-9485-44ff5ebfdfd4', 8, 338, '2020-04-29 19:38:04', '2020-04-29 19:38:04');
+INSERT INTO `token` VALUES ('d9cec0e0-7de0-4c5c-9cc6-7b35e6e08e20', 8, 339, '2020-04-29 19:38:04', '2020-04-29 19:38:04');
+INSERT INTO `token` VALUES ('b6e2a3e3-fe4b-40a7-8926-5db4c24836c0', 8, 340, '2020-05-02 18:33:55', '2020-05-02 18:33:55');
+INSERT INTO `token` VALUES ('51dd741e-8616-4837-96f2-8d531b70251d', 8, 341, '2020-05-02 18:33:55', '2020-05-02 18:33:55');
+INSERT INTO `token` VALUES ('ea298775-abd6-4e01-bf87-e9407f9e4b09', 8, 342, '2020-05-02 18:33:55', '2020-05-02 18:33:55');
+INSERT INTO `token` VALUES ('ea7ca14a-7dba-45c1-a199-1a8d228da9db', 8, 343, '2020-05-02 18:33:55', '2020-05-02 18:33:55');
+INSERT INTO `token` VALUES ('681a0b32-a731-4eab-949a-6a9f27ea1d03', 8, 344, '2020-05-02 18:33:55', '2020-05-02 18:33:55');
+INSERT INTO `token` VALUES ('6ed4d128-4094-486d-b8b1-494564d78303', 8, 345, '2020-05-02 18:33:55', '2020-05-02 18:33:55');
+INSERT INTO `token` VALUES ('009ee078-6b4e-4c0f-9c72-0431a9396b2d', 8, 346, '2020-05-02 18:33:55', '2020-05-02 18:33:55');
+INSERT INTO `token` VALUES ('c1039422-1c94-47e2-9e75-1e9bf6cb0859', 8, 347, '2020-05-02 18:33:55', '2020-05-02 18:33:55');
+INSERT INTO `token` VALUES ('f6a9eb9c-8eba-4edb-bc57-f07ba8b6e352', 8, 348, '2020-05-02 18:33:55', '2020-05-02 18:33:55');
+INSERT INTO `token` VALUES ('75ccf7bb-b2a8-4441-903b-6be6241085a1', 8, 349, '2020-05-02 18:33:55', '2020-05-02 18:33:55');
+INSERT INTO `token` VALUES ('0503d0c3-a351-42c0-8bbb-e0fa6e37731e', 8, 350, '2020-05-02 18:33:55', '2020-05-02 18:33:55');
+INSERT INTO `token` VALUES ('45d78e63-8ef5-495f-875a-b5c0c1c466e2', 8, 352, '2020-05-02 18:33:55', '2020-05-02 18:33:55');
+INSERT INTO `token` VALUES ('abfe04a7-e162-4832-a11c-4eebf2655a9d', 8, 353, '2020-05-02 18:33:55', '2020-05-02 18:33:55');
+INSERT INTO `token` VALUES ('b463b9bc-f193-40f7-a112-866362a31051', 8, 355, '2020-05-02 18:33:55', '2020-05-02 18:33:55');
+INSERT INTO `token` VALUES ('8535fa1f-4480-46a7-b9dc-dc449a892940', 8, 356, '2020-05-04 22:06:53', '2020-05-04 22:06:53');
+INSERT INTO `token` VALUES ('54131e98-f716-4856-ae89-9eea272cc6e8', 8, 357, '2020-05-04 22:06:53', '2020-05-04 22:06:53');
+INSERT INTO `token` VALUES ('d69971e7-e074-436a-addb-81330b024ca7', 8, 358, '2020-05-04 22:06:53', '2020-05-04 22:06:53');
+INSERT INTO `token` VALUES ('bafed2b7-53e4-4afd-a614-5e1f870469d4', 8, 359, '2020-05-04 22:06:53', '2020-05-04 22:06:53');
 
 -- ----------------------------
 -- Table structure for topic
@@ -2371,7 +2406,7 @@ CREATE TABLE `topic`  (
   `board_id` int(11) NOT NULL,
   `link` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 83 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 85 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of topic
@@ -2458,6 +2493,8 @@ INSERT INTO `topic` VALUES (79, '2020-04-28 20:04:44', '2020-04-28 20:04:44', 0,
 INSERT INTO `topic` VALUES (80, '2020-04-28 20:04:44', '2020-04-28 20:04:44', 0, '纽约州取消6月23日总统初选246957', '纽约州取消6月23日总统初选246957', 1, 1, 'https://www.baidu.com/s?word=%E7%BA%BD%E7%BA%A6%E5%B7%9E%E5%8F%96%E6%B6%886%E6%9C%8823%E6%97%A5%E6%80%BB%E7%BB%9F%E5%88%9D%E9%80%89&sa=osari_hotword_19&mmsuse=sarifrom@osari_map');
 INSERT INTO `topic` VALUES (81, '2020-04-28 20:04:44', '2020-04-28 20:04:44', 0, '陕西新增20例境外输入病例238627', '陕西新增20例境外输入病例238627', 1, 1, 'https://www.baidu.com/s?word=%E9%99%95%E8%A5%BF%E6%96%B0%E5%A2%9E20%E4%BE%8B%E5%A2%83%E5%A4%96%E8%BE%93%E5%85%A5%E7%97%85%E4%BE%8B&sa=osari_hotword_20&mmsuse=sarifrom@osari_map');
 INSERT INTO `topic` VALUES (82, '2020-04-28 20:51:16', '2020-04-28 20:51:16', 0, '', '123456', 8, 2, NULL);
+INSERT INTO `topic` VALUES (83, '2020-05-02 18:33:55', '2020-05-02 18:33:55', 4, 'Here is the Title', '这里是我发布的第一个动态', 8, 2, NULL);
+INSERT INTO `topic` VALUES (84, '2020-05-02 18:33:55', '2020-05-02 18:33:55', 0, 'test', '**markdonw**', 8, 2, NULL);
 
 -- ----------------------------
 -- Table structure for user

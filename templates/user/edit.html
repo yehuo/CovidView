@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>CovidView | {{ other.username }} Edit</title>
-    <link rel="stylesheet" href="/static/css/edit.css">
-</head>
-<body>
+{% extends "./user/base.html" %}
+
+{% block title %}
+<title>
+	User Edit | {{ other.username }}
+</title>
+{% endblock %}
+
+{% block mainblock %}
 <div class="row">
     <div class="col-2">
         {% include 'leftbar.html' %}
@@ -15,18 +16,16 @@
         <div>Hello,{{ user.username }}</div>
         <div>本页为用户信息页，您可以在此更改密码或调整信息</div>
         <div class="row">
-            <div class="col-8 card">
-                {% block l-card %}
+            <div id="left-board" class="col-9 card">
             </div>
 
-            <div class="col-4 card">
-                {% block r-card %}
+            <div id="right-board" class="col-3 card">
             </div>
         </div>
     </div>
 </div>
 <div id="main">
-    <div id="sidebar">
+    <div id="">
 		<!-- 左侧用户信息展板 -->
         <div class="panel" style="margin-bottom: 0">
             <div class="header">
@@ -88,88 +87,7 @@
             <div class="header">
                 <span class="col_fade">最近创建的话题</span>
             </div>
-            {% if (ms | count) == 0 %}
-                <div class="inner">
-                    <p>无话题</p>
-                </div>
-            {% else %}
-                {% for t in ms %}
-                    {% set a = (t.replies() | myfirst) %}
-                    <div class="cell">
-                        <a class="user_avatar pull-left">
-                            <img src="{{ other.img }}" title="{{ other.username }}">
-                        </a>
-                        <span class="reply_count pull-left">
-						<span class="count_of_replies" title="回复数">
-							{{ t.replies() | count }}
-						</span>
-						<span class="count_seperator">/</span>
-						<span class="count_of_visits" title="点击数">
-							{{ t.views }}
-						</span>
-						</span>
-                        <span class="reply_count pull-left"></span>
-                        <a class="last_time pull-right">
-                            {% if a == None %}
-                                <div></div>
-                            {% else %}
-                                {% set u = a.user() %}
-                                <img class="user_small_avatar" src="{{ u.img }}">
-                            {% endif %}
-                            <span class="niku-time" data-created_time="{{ t.updated_time }}"></span>
-                        </a>
-                        <div class="topic_title_wrapper">
-                            <a class="topic_title" href="{{ url_for('topic.detail', id=t.id) }}"
-                               title="{{ t.title }}">
-                                {{ t.title }}
-                            </a>
-                        </div>
-                    </div>
-                {% endfor %}
-            {% endif %}
-        </div>
-		<!-- 最近参与的话题 -->
-        <div class="panel">
-            <div class="header">
-                <span class="col_fade">最近参与的话题</span>
-            </div>
-            {% if (ts | count) == 0 %}
-                <div class="inner">
-                    <p>无话题</p>
-                </div>
-            {% else %}
-                {% for t in ts %}
-                {% set user = t.user() %}
-                <div class="cell">
-                    <a class="user_avatar pull-left" href=" {{ url_for('user_index.index', id=t.id) }} ">
-                        <img src="{{ user.img }}">
-                    </a>
-                    <span class="reply_count pull-left">
-						<span class="count_of_replies" title="回复数">
-						  {{ t.replies() | count }}
-						</span>
-						<span class="count_seperator">/</span>
-						<span class="count_of_visits" title="点击数">
-						  {{ t.views }}
-						</span>
-					</span>
-                    {% set r = t.replies()[0] %}
-                    {% set u = r.user() %}
-                    <a class="last_time pull-right" href="{{ url_for('user_index.index', id=u.id) }}">
-                        <img class="user_small_avatar"
-                             src="{{ u.img }}"/>
-                        <span class="niku-time" data-created_time="{{ t.updated_time }}"></span>
-                    </a>
-                    <div class="topic_title_wrapper">
-                        <a class="topic_title" href="{{ url_for('topic.detail', id=t.id) }}"
-                           title="{{ t.title }}">
-                            {{ t.title }}
-                        </a>
-                    </div>
-                </div>
-
-                {% endfor %}
-            {% endif %}
+            
         </div>
     </div>
 	<!-- 背景图片 -->
@@ -231,5 +149,4 @@
     __main()
 
 </script>
-</body>
-</html>
+{% endblock %}

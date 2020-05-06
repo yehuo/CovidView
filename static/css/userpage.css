@@ -20,7 +20,7 @@
 .hello-title{
 	color: white;
 	margin-top:25px;
-	margin-bottom: 25px;
+	margin-bottom: 5px;
 	font-family: arial;
 	font-style: bold;
 	font-size: 44px;
@@ -29,4 +29,12 @@
 .sub-title{
 	color: white;
 	font-size:14px;
+}
+.user-img{
+	height: 55px;
+	width: 55px;
+}
+.user-title{
+	height: 100px;
+	width: 100px;
 }

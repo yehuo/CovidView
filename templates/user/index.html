@@ -10,18 +10,13 @@
 <div id="head-infos">
 	<div class="profile-title">USER PROFILE</div>
 	<div class="hello-title">Hello,{{ u.username }}</div>
-	<div class="sub-title">本页为用户信息页，您可以在此更改密码或调整信息</div>
 </div>
 
 <div id="main-page row ml-auto">
 	<div class="card-l col-8">
-		<div class="header">
-			<span class="col_fade">MY Account</span>
-		</div>
 		<div class="inner">
 			<div class="user_card">
 				<div>
-					<span class="user_name"><a class="dark" href="{{ url_for('user.index', id=other.id) }}">{{ other.username }}</a></span>
 					<div class="space clearfix"></div>
 					{% if u.signature == None %}
 					<span class="signature">
@@ -39,78 +34,18 @@
 				</div>
 			</div>
 		</div>
-		<div id="card-l-t">
-			<form>
-				<div class="form-group">
-					<label for="username-input">Username:</label>
-					<input class="form-control" id="username-input"></input>
-				</div>
-				
-				<div class="form-group">
-					<label for="email-input">Email:</label>
-					<input class="form-control" id="email-input"></input>
-				</div>
-				
-				<div class="form-group">
-					<label for="username-input">Country</label>
-					<input type="" class="form-control" id="username-input"></input>
-				</div>
-				
-				<div class="form-group">
-					<label for="username-input">Username:</label>
-					<input class="form-control" id="username-input"></input>
-				</div>
-				
-				<div class="form-group">
-					<input type="button" class="form-control" id="username-input">Save</input>
-				</div>
-			</form>
-		</div>
-		<div id="card-l-b">
-			
-		</div>
 	</div>
 
-	<div class="card-r col-4">
-		<div class="header">
-			<span class="col_fade">MY Account</span>
-		</div>
-		<div class="inner">
-			<div class="user_card">
-				<div>
-					<a class="user_avatar" href="{{ url_for('user.index', id=other.id) }}">
-						<img src="{{ other.img }}" title="{{ other.username }}">
-					</a>
-					<span class="user_name"><a class="dark" href="{{ url_for('user.index', id=other.id) }}">{{ other.username }}</a></span>
-
-				</div>
-			</div>
-		</div>
-		<div class="panel">
-			<div class="inner">
-				<a href="{{ url_for('topic.new', board_id=-1) }}" class="create_topic_btn">
-					<span class="span-success">发布话题</span>
-				</a>
-			</div>
-		</div>
-	</div>
 	<div id="content">
-		<div class="panel">
-			<div class="header">
-				<ul class="breadcrumb">
-					<li><a href="{{ url_for('topic.index', id=u.id) }}">主页</a><span class="divider">/</span></li>
-				</ul>
-			</div>
-			<div class="inner userinfo">
-				<div class="user_big_avatar">
-					<img src="{{ other.img }}" class="user_avatar" title="{{ other.username }}">
+		<div class="panel bg-light mx-3" style="border-radius: 20px;">
+			<div class="inner userinfo row">
+				<div class="user_big_avatar col-2">
+					<img src="{{ other.img }}" class="user-title mx-3 my-2" title="{{ other.username }}">
 				</div>
-				<div class="user_profile">
-					<ul class="unstyled">
-					</ul>
+				<div class="col-10">
+					<p class="col_fade">注册于{{ other.createTime }}</p>
+					<p class="col_fade">发表过{{ ms | count }}篇文章</p>
 				</div>
-				<p class="col_fade" id="niku-time" data-created_time="{{ other.created_time }}">注册时间</p>
-				<p class="col_fade">发表过{{ ms | count }}篇文章</p>
 			</div>
 		</div>
 		<div class="panel">
@@ -119,44 +54,38 @@
 			</div>
 			{% if (ms | count) == 0 %}
 			<div class="inner">
-				<p>无话题</p>
+				<p>您暂未发布过话题</p>
 			</div>
 			{% else %}
-			{% for t in ms %}
-			{% set a = (t.replies() | myfirst) %}
-			<div class="cell">
-				<a class="user_avatar pull-left">
-					<img src="{{ other.img }}" title="{{ other.username }}">
-				</a>
-				<span class="reply_count pull-left">
-
-					<span class="count_of_replies" title="回复数">
-						{{ t.replies() | count }}
-					</span>
-					<span class="count_seperator">/</span>
-					<span class="count_of_visits" title="点击数">
-						{{ t.views }}
-					</span>
-				</span>
-				<span class="reply_count pull-left">
-
-				</span>
-				<a class="last_time pull-right">
-					{% if a == None %}
-					<div></div>
-					{% else %}
-					{% set u = a.user() %}
-					<img class="user_small_avatar" src="{{ u.img }}">
-					{% endif %}
-					<span class="niku-time" data-created_time="{{ t.updated_time }}"></span>
-				</a>
-				<div class="topic_title_wrapper">
-					<a class="topic_title" href="{{ url_for('topic.detail', id=t.id) }}" title="{{ t.title }}">
-						{{ t.title }}
-					</a>
-				</div>
-			</div>
-			{% endfor %}
+				{% for t in ms %}
+					{% set a = (t.replies() | myfirst) %}
+					<div class="card mx-3 my-4" style="background-color: #009999; border-radius: 20px;">
+						<div class="row no-gutters">
+							<div class="col-1">
+								<img class="user-img my-3 mx-3" src="{{ other.img }}" title="{{ other.username }}">
+							</div>
+							<div class="col-11">
+								<div class="card-body p-2">
+									<h5 class="card-title">	{{t.title}}</h5>
+									<p class="card-text mb-0">{{t.content}}</p>
+									<p class="card-text mb-0 text-muted">{{ t.replies() | count }}/{{ t.views }}</p>
+									<a class="last_time pull-right pb-4">
+										{% if a == None %}
+										<div></div>
+										{% else %}
+										{% set u = a.user() %}
+										replied by:	
+										<img class="ml-2" style="width: 33px;" src="{{ u.img }}">
+										{% endif %}
+										<span class="niku-time" data-created_time="{{ t.updated_time }}"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer"><a class="pull-right mr-2" style="color: white;" href="{{ url_for('topic.detail', id=t.id) }}">>>detail</a></div>	
+						<!-- 首条回复 -->
+					</div>
+				{% endfor %}
 			{% endif %}
 		</div>
 	</div>

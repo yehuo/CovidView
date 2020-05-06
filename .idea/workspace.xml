@@ -20,31 +20,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9ddee9e-09b9-4d99-941d-43e28fb597f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/db_init_prog/ccdc_spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CovidView.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CovidView.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forecast_func.py" beforeDir="false" afterPath="$PROJECT_DIR$/db_init_prog/JohnsHopkins_spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_init_prog/JohnsHopkins_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/db_init_prog/JohnsHopkins_spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_init_prog/csv_temp.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/leftbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/leftbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/topic/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/topic/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test20200429.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Covid20200506.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdb.db" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/CovidView$main.coverage" NAME="main Coverage Results" MODIFIED="1588075473469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_init_prog" />
-    <SUITE FILE_PATH="coverage/CovidView$ccdc_spider.coverage" NAME="ccdc_spider Coverage Results" MODIFIED="1588421352416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_init_prog" />
+    <SUITE FILE_PATH="coverage/CovidView$main.coverage" NAME="main Coverage Results" MODIFIED="1587570184909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_init_prog" />
     <SUITE FILE_PATH="coverage/CovidView$apis.coverage" NAME="apis Coverage Results" MODIFIED="1587303885572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CovidView$JohnsHopkins_spider.coverage" NAME="JohnsHopkins_spider Coverage Results" MODIFIED="1588697164842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_init_prog" />
     <SUITE FILE_PATH="coverage/CovidView$global_spider.coverage" NAME="global_spider Coverage Results" MODIFIED="1587568985240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_init_prog" />
     <SUITE FILE_PATH="coverage/CovidView$news_spider.coverage" NAME="news_spider Coverage Results" MODIFIED="1587551149755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_init_prog" />
-    <SUITE FILE_PATH="coverage/CovidView$CovidView.coverage" NAME="CovidView Coverage Results" MODIFIED="1588601178465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CovidView$CovidView.coverage" NAME="CovidView Coverage Results" MODIFIED="1587915383101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CovidView$china_status_spider.coverage" NAME="china_status_spider Coverage Results" MODIFIED="1587554931931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_init_prog" />
     <SUITE FILE_PATH="coverage/CovidView$china_history_spider.coverage" NAME="china_history_spider Coverage Results" MODIFIED="1587569678207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_init_prog" />
   </component>
@@ -66,113 +60,6 @@
       </path>
     </expand>
     <select />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db_init_prog/ccdc_spider.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-              <folding>
-                <element signature="e#57#95#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/db_init_prog/JohnsHopkins_spider.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-              <folding>
-                <element signature="e#0#6#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db_init_prog/config.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#52#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db_init_prog/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#52#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/topic.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/topic.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1102">
-              <caret line="71" column="27" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#97#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/topic.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/token.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="12" column="30" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#46#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/helper.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -200,65 +87,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/templates/leftbar.html" />
-        <option value="$PROJECT_DIR$/routes/helper.py" />
-        <option value="$PROJECT_DIR$/models/token.py" />
-        <option value="$PROJECT_DIR$/routes/topic.py" />
-        <option value="$PROJECT_DIR$/models/topic.py" />
-        <option value="$PROJECT_DIR$/static/css/topic.css" />
-        <option value="$PROJECT_DIR$/templates/topic/new.html" />
-        <option value="$PROJECT_DIR$/db_init_prog/ccdc_spider.py" />
-        <option value="$PROJECT_DIR$/db_init_prog/JohnsHopkinsSpider.py" />
-        <option value="$PROJECT_DIR$/db_init_prog/JohnsHopkins_spider.py" />
-        <option value="$PROJECT_DIR$/models/predict_func.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="960" />
-    <option name="width" value="960" />
-    <option name="height" value="1030" />
-  </component>
   <component name="ProjectId" id="1av8QPNiJ9cb7cmvsJwytNRt76J" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="CovidView" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CovidView" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CovidView" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CovidView" type="462c0819:PsiDirectoryNode" />
-              <item name="db_init_prog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CovidView" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CovidView" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CovidView" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CovidView" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -276,33 +107,21 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\workspace\CovidView\db_init_prog" />
       <recent name="C:\Users\fffy\CovidView" />
+      <recent name="D:\workspace\CovidView\db_init_prog" />
       <recent name="D:\workspace\CovidView\static\js" />
       <recent name="D:\workspace\CovidView\static\css" />
       <recent name="D:\workspace\CovidView" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\workspace\CovidView" />
       <recent name="C:\Users\fffy\CovidView" />
+      <recent name="D:\workspace\CovidView" />
       <recent name="D:\workspace\CovidView\static\css" />
       <recent name="D:\workspace\CovidView\images" />
       <recent name="D:\workspace\CovidView\static\js" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Python.JohnsHopkins_spider">
+  <component name="RunManager" selected="Flask server.CovidView">
     <configuration name="JohnsHopkins_spider" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="CovidView" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -310,7 +129,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="D:\software\anaconda3\envs\learn\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\fffy\anaconda3\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/db_init_prog" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -339,28 +158,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="D:\workspace\CovidView\db_init_prog\apis.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ccdc_spider" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="CovidView" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="D:\software\anaconda3\envs\learn\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/db_init_prog" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/db_init_prog/ccdc_spider.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -479,11 +276,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="CovidView" type="Python.FlaskServer" factoryName="Flask server">
+    <configuration name="CovidView" type="Python.FlaskServer">
       <option name="flaskDebug" value="true" />
       <option name="flaskEnv" />
       <module name="CovidView" />
-      <option name="target" value="D:\workspace\CovidView\wsgi.py" />
+      <option name="target" value="C:\Users\fffy\CovidView\wsgi.py" />
       <option name="targetType" value="PATH" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -502,7 +299,6 @@
     <list>
       <item itemvalue="Flask server.CovidView" />
       <item itemvalue="Python.JohnsHopkins_spider" />
-      <item itemvalue="Python.ccdc_spider" />
       <item itemvalue="Python.apis" />
       <item itemvalue="Python.news_spider" />
       <item itemvalue="Python.main" />
@@ -540,17 +336,10 @@
       <workItem from="1587914939103" duration="2494000" />
       <workItem from="1587949001632" duration="2560000" />
       <workItem from="1588032789269" duration="3615000" />
-      <workItem from="1588075373932" duration="5625000" />
-      <workItem from="1588160230367" duration="2799000" />
-      <workItem from="1588414827275" duration="6303000" />
-      <workItem from="1588422101055" duration="153000" />
-      <workItem from="1588510347448" duration="1957000" />
-      <workItem from="1588693075730" duration="2926000" />
+      <workItem from="1588063937848" duration="1191000" />
+      <workItem from="1588724660032" duration="7000000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19763000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -561,56 +350,15 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="768" y="0" width="768" height="824" extended-state="0" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2690141" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.33526012" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286119" />
-      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.3286119" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3286119" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3286119" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -629,175 +377,50 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="656" y="123" key="#CovidView" timestamp="1587606943982">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="123" key="#CovidView/0.0.1920.1040@0.0.1920.1040" timestamp="1587606943982" />
-    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587949065239">
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588725692732">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587949065239" />
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588725692732" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1588045677241">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588045677241" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1588045639336">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1588725688331">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588045639336" />
-    <state width="1876" height="254" key="GridCell.Tab.0.bottom" timestamp="1588045676351">
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588725688331" />
+    <state width="450" height="254" key="GridCell.Tab.0.bottom" timestamp="1588760238402">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588045676351" />
-    <state width="1876" height="254" key="GridCell.Tab.0.center" timestamp="1588045676351">
+    <state width="450" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588760238402" />
+    <state width="450" height="254" key="GridCell.Tab.0.center" timestamp="1588760238402">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="254" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588045676351" />
-    <state width="1876" height="254" key="GridCell.Tab.0.left" timestamp="1588045676351">
+    <state width="450" height="254" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588760238402" />
+    <state width="450" height="254" key="GridCell.Tab.0.left" timestamp="1588760238402">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="254" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588045676351" />
-    <state width="1876" height="254" key="GridCell.Tab.0.right" timestamp="1588045676351">
+    <state width="450" height="254" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588760238402" />
+    <state width="450" height="254" key="GridCell.Tab.0.right" timestamp="1588760238402">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="254" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588045676351" />
-    <state x="461" y="151" key="SettingsEditor" timestamp="1587949086214">
+    <state width="450" height="254" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588760238402" />
+    <state x="461" y="151" key="SettingsEditor" timestamp="1588724700836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="151" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587949086214" />
+    <state x="461" y="151" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1588724700836" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CovidView$JohnsHopkins_spider.coverage" NAME="JohnsHopkins_spider Coverage Results" MODIFIED="1588730368719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_init_prog" />
     <SUITE FILE_PATH="coverage/CovidView$main.coverage" NAME="main Coverage Results" MODIFIED="1587830125700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_init_prog" />
-    <SUITE FILE_PATH="coverage/CovidView$CovidView.coverage" NAME="CovidView Coverage Results" MODIFIED="1588033933933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config_info.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/leftbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="90" selection-start-line="10" selection-start-column="90" selection-end-line="10" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/topic/new.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1045">
-          <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db_init_prog/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/topic.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/topic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1102">
-          <caret line="71" column="27" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#97#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/topic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/token.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="12" column="30" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/helper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db_init_prog/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db_init_prog/ccdc_spider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-          <folding>
-            <element signature="e#57#95#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db_init_prog/csv_temp.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/predict_func.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db_init_prog/JohnsHopkins_spider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#6#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <SUITE FILE_PATH="coverage/CovidView$CovidView.coverage" NAME="CovidView Coverage Results" MODIFIED="1588752646886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="masterDetails">
     <states>

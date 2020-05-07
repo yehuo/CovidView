@@ -37,7 +37,8 @@ def index():
 @main.route('/edit/<int:id>')
 def edit(id):
     u = User.one(id=id)
-    return render_template("user/edit.html", other=u)
+    user = current_user()
+    return render_template("user/edit.html", other=u, u=user)
 
 
 @main.route('/update', methods=['POST'])

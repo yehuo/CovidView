@@ -7,51 +7,73 @@
 {% endblock %}
 
 {% block mainblock %}
-<div class="row">
-    <div class="col-2">
-        {% include 'leftbar.html' %}
-    </div>
-    <div class="col-10">
-        <div>USER PROFILE</div>
-        <div>Hello,{{ user.username }}</div>
-        <div>本页为用户信息页，您可以在此更改密码或调整信息</div>
-        <div class="row">
-            <div id="left-board" class="col-9 card">
-            </div>
-
-            <div id="right-board" class="col-3 card">
-            </div>
-        </div>
-    </div>
+<div id="head-infos">
+	<div class="profile-title">USER PROFILE</div>
+	<div class="hello-title">Hello,{{ u.username }}</div>
 </div>
-<div id="main">
-    <div id="">
-		<!-- 左侧用户信息展板 -->
-        <div class="panel" style="margin-bottom: 0">
-            <div class="header">
-                <span class="col_fade">个人信息</span>
-            </div>
-            <div class="inner">
-                <div class="user_card">
-                    <div>
-                        <a class="user_avatar" href="{{ url_for('user_index.index', id=other.id) }}">
-                            <img src="{{ other.img }}" title="{{ other.username }}">
-                        </a>
-                        <span class="user_name">
-							<a class="dark" href="{{ url_for('user_index.index', id=other.id) }}">{{ other.username }}</a>
-						</span>
-                        <div class="space clearfix"></div>
-							{% if user.signature == None %}
-								<span class="signature">“这家伙很懒，什么个性签名都没有留下。”</span>
-							{% elif (user.signature | count) == 0 %}
-								<span class="signature">“这家伙很懒，什么个性签名都没有留下。”</span>
-							{% else %}
-								<span class="signature">“{{ user.signature }}”</span>
-							{% endif %}
-						</div>
-                </div>
-            </div>
-        </div>
+<div id="main-page row ml-auto">
+	<div class="card-l col-8">
+		<div class="inner">
+			<div class="user_card">
+				<div>
+					<div class="space clearfix"></div>
+					{% if u.signature == None %}
+					<span class="signature">
+						“这家伙很懒，什么个性签名都没有留下。”
+					</span>
+					{% elif (u.signature | count) == 0 %}
+					<span class="signature">
+						“这家伙很懒，什么个性签名都没有留下。”
+					</span>
+					{% else %}
+					<span class="signature">
+						“{{ u.signature }}”
+					</span>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+<div id="main" class="row">
+	<!-- 左侧用户信息展板 -->
+	<div id="card-l" class="card">
+		<div class="card-header">
+			<span class="title-text">我的账户</span>
+		</div>
+		<div class="card-body">
+			<div>用户信息</div>
+			<hr></hr>
+			<div class="user-info">
+				<form>
+					<label>用户名：</label>
+					<input type="text" class="form-control" id="username-input" placeholder="{{ other.username }}"/>
+					<label>邮箱：</label>
+					<input type="email" class="form-control" id="email-input" placeholder="{{ other.mail }}"/>
+					<label>个性签名：</label>
+					<input type="text" class="form-control" id="signature-input" placeholder="{{ other.signature }}"/>
+					<label>地区：</label>
+					<input type="text" class="form-control" id="location-input" placeholder="{{ other.location }}"/>
+					<input type="button" class="form-control pull-right" id="username-input" placeholder="{{ other.username }}"/>
+				</form>
+				<div>
+					<a class="user_avatar" href="{{ url_for('user.index', id=other.id) }}">
+						<img src="{{ other.img }}" title="{{ other.username }}">
+					</a>
+					<span class="user_name">
+						<a class="dark" href="{{ url_for('user.index', id=other.id) }}">{{ other.username }}</a>
+					</span>
+					<div class="space clearfix"></div>
+						{% if other.signature == None %}
+							<span class="signature">“这家伙很懒，什么个性签名都没有留下。”</span>
+						{% elif (other.signature | count) == 0 %}
+							<span class="signature">“这家伙很懒，什么个性签名都没有留下。”</span>
+						{% else %}
+							<span class="signature">“{{ other.signature }}”</span>
+						{% endif %}
+					</div>
+			</div>
+		</div>
+	</div>
 		<!-- 右侧话题发布展板 -->
         <div class="panel">
             <div class="inner">
@@ -65,7 +87,7 @@
         <div class="panel">
             <div class="header">
                 <ul class="breadcrumb">
-                    <li><a href="{{ url_for('topic.index', id=user.id) }}">主页</a><span class="divider">/</span></li>
+                    <li><a href="{{ url_for('topic.index', id=u.id) }}">主页</a><span class="divider">/</span></li>
                 </ul>
             </div>
             <div class="inner userinfo">

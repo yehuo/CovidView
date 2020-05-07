@@ -10,6 +10,8 @@ class User(SQLMixin, db.Model):
     password = Column(String(255), nullable=False)
     signature = Column(String(255), nullable=False, default='这个人很懒，什么都没有填')
     img = Column(String(100), nullable=False, default='/images/default_head_pic.jpg')
+    location=Column(String(255),default=None)
+    mail=Column(String(255),default=None)
 
     # 返回密码hash值+盐值之后的hash值
     @classmethod

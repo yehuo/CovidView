@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String
+from sqlalchemy import Column, String,Integer
 from models.base_model import SQLMixin, db
 import time
 import hashlib
@@ -12,6 +12,7 @@ class User(SQLMixin, db.Model):
     img = Column(String(100), nullable=False, default='/images/default_head_pic.jpg')
     location=Column(String(255),default=None)
     mail=Column(String(255),default=None)
+    confirm=Column(Integer,default=0)
 
     # 返回密码hash值+盐值之后的hash值
     @classmethod
@@ -33,6 +34,30 @@ class User(SQLMixin, db.Model):
         p = pwd.encode('ascii')
         s = hashlib.sha256(p)
         return s.hexdigest()
+
+    # 检查邮箱是否符合规范
+    def mailbox_check(self,address):
+        # todo:检查邮箱格式
+        return True
+
+
+    # 邮箱注册
+    # unfinished
+    @classmethod
+    def m_register(cls, form):
+        mailbox = form.get('mail', '')
+        pwd = form.get('password', '')
+        if cls.mailbox_check(mailbox) and len(pwd) > 8 and User.one(mail=mailbox) is None:
+            u = User.new(form)
+            u.password = u.salted_password(pwd)
+            u.confirm=0
+            u.save()
+            return u
+        elif cls.mailbox_check(mailbox)==False or len(pwd) < 8:
+            r = 'f'
+            return r
+        else:
+            return None
 
     # 注册：用户名，密码必须都长度大于2，且用户名未被注册过
     @classmethod

@@ -20,9 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9ddee9e-09b9-4d99-941d-43e28fb597f7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db_init_prog/predict.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CovidView.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CovidView.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_init_prog/JohnsHopkins_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/db_init_prog/JohnsHopkins_spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_init_prog/confirm.csv" beforeDir="false" afterPath="$PROJECT_DIR$/db_init_prog/data/confirm.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_init_prog/dead.csv" beforeDir="false" afterPath="$PROJECT_DIR$/db_init_prog/data/dead.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_init_prog/heal.csv" beforeDir="false" afterPath="$PROJECT_DIR$/db_init_prog/data/heal.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,34 +67,6 @@
     </expand>
     <select />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/user.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#121#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/models/user.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -110,51 +93,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/routes/user.py" />
-        <option value="$PROJECT_DIR$/models/user.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="960" />
-    <option name="width" value="960" />
-    <option name="height" value="1030" />
-  </component>
   <component name="ProjectId" id="1av8QPNiJ9cb7cmvsJwytNRt76J" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="CovidView" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CovidView" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CovidView" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CovidView" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CovidView" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CovidView" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -162,8 +103,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/wsgi.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/db_init_prog/predict.py" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -171,6 +113,13 @@
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/todoList.pdf" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\fffy\CovidView\db_init_prog\data" />
+      <recent name="C:\Users\fffy\CovidView" />
+      <recent name="D:\workspace\CovidView" />
+      <recent name="D:\workspace\CovidView\static\css" />
+      <recent name="D:\workspace\CovidView\images" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\fffy\CovidView" />
       <recent name="D:\workspace\CovidView\db_init_prog" />
@@ -178,25 +127,6 @@
       <recent name="D:\workspace\CovidView\static\css" />
       <recent name="D:\workspace\CovidView" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\fffy\CovidView" />
-      <recent name="D:\workspace\CovidView" />
-      <recent name="D:\workspace\CovidView\static\css" />
-      <recent name="D:\workspace\CovidView\images" />
-      <recent name="D:\workspace\CovidView\static\js" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Flask server.CovidView">
     <configuration name="JohnsHopkins_spider" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -353,11 +283,33 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="CovidView" type="Python.FlaskServer" factoryName="Flask server">
+    <configuration name="predict" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="CovidView" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\fffy\anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/db_init_prog" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/db_init_prog/predict.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CovidView" type="Python.FlaskServer">
       <option name="flaskDebug" value="true" />
       <option name="flaskEnv" />
       <module name="CovidView" />
-      <option name="target" value="D:\workspace\CovidView\wsgi.py" />
+      <option name="target" value="C:\Users\fffy\CovidView\wsgi.py" />
       <option name="targetType" value="PATH" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -375,6 +327,7 @@
     </configuration>
     <list>
       <item itemvalue="Flask server.CovidView" />
+      <item itemvalue="Python.predict" />
       <item itemvalue="Python.JohnsHopkins_spider" />
       <item itemvalue="Python.apis" />
       <item itemvalue="Python.news_spider" />
@@ -417,11 +370,9 @@
       <workItem from="1588724660032" duration="7000000" />
       <workItem from="1588766611741" duration="2609000" />
       <workItem from="1588852553453" duration="1801000" />
+      <workItem from="1588903604591" duration="6876000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4410000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -432,49 +383,15 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2533512" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32719547" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -493,71 +410,59 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="656" y="123" key="#CovidView" timestamp="1587606943982">
+    <state x="656" y="123" key="#CovidView" timestamp="1588904116790">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="123" key="#CovidView/0.0.1920.1040@0.0.1920.1040" timestamp="1587606943982" />
-    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588725692732">
+    <state x="656" y="123" key="#CovidView/0.0.1920.1040@0.0.1920.1040" timestamp="1588904116790" />
+    <state x="716" y="271" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588907096298">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588725692732" />
+    <state x="716" y="271" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588907096298" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1588045677241">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588045677241" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1588725688331">
+    <state x="818" y="266" key="EnvironmentVariablesDialog" timestamp="1588904173555">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588725688331" />
-    <state width="450" height="254" key="GridCell.Tab.0.bottom" timestamp="1588760238402">
+    <state x="818" y="266" key="EnvironmentVariablesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588904173555" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1588907091303">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="450" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588760238402" />
-    <state width="450" height="254" key="GridCell.Tab.0.center" timestamp="1588760238402">
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588907091303" />
+    <state width="1054" height="254" key="GridCell.Tab.0.bottom" timestamp="1588932329464">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="450" height="254" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588760238402" />
-    <state width="450" height="254" key="GridCell.Tab.0.left" timestamp="1588760238402">
+    <state width="1054" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588932329464" />
+    <state width="1054" height="254" key="GridCell.Tab.0.center" timestamp="1588932329464">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="450" height="254" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588760238402" />
-    <state width="450" height="254" key="GridCell.Tab.0.right" timestamp="1588760238402">
+    <state width="1054" height="254" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588932329464" />
+    <state width="1054" height="254" key="GridCell.Tab.0.left" timestamp="1588932329464">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="450" height="254" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588760238402" />
+    <state width="1054" height="254" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588932329464" />
+    <state width="1054" height="254" key="GridCell.Tab.0.right" timestamp="1588932329464">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1054" height="254" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588932329464" />
     <state x="461" y="151" key="SettingsEditor" timestamp="1588724700836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="151" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1588724700836" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1588932086492">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588932086492" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CovidView$JohnsHopkins_spider.coverage" NAME="JohnsHopkins_spider Coverage Results" MODIFIED="1588730368719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_init_prog" />
+    <SUITE FILE_PATH="coverage/CovidView$JohnsHopkins_spider.coverage" NAME="JohnsHopkins_spider Coverage Results" MODIFIED="1588907179827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_init_prog" />
     <SUITE FILE_PATH="coverage/CovidView$main.coverage" NAME="main Coverage Results" MODIFIED="1587830125700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_init_prog" />
-    <SUITE FILE_PATH="coverage/CovidView$CovidView.coverage" NAME="CovidView Coverage Results" MODIFIED="1588752646886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/routes/user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#121#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <SUITE FILE_PATH="coverage/CovidView$predict.coverage" NAME="predict Coverage Results" MODIFIED="1588907853897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_init_prog" />
+    <SUITE FILE_PATH="coverage/CovidView$CovidView.coverage" NAME="CovidView Coverage Results" MODIFIED="1588908656981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="masterDetails">
     <states>

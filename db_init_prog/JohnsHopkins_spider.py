@@ -24,22 +24,6 @@ def write_csv():
         fp.close()
     return True
 
-
-def extend_index(index):
-    values = index.values
-    current = datetime.strptime(index[-1], '%m/%d/%y')
-    while len(values) < 5:  # 预测后续五天确诊数字
-        current = current + timedelta(days=1)
-        values = np.append(values, datetime.strftime(current, '%m/%d/%y'))
-    return values
-
-
-def read_f():
-    for col_name in csv_link:
-        filename=col_name+'.csv'
-        data=pd.read_csv(filename)
-        for row in range(len(data)):
-            print(data.iloc[row]['Country/Region'])
 if __name__ == '__main__':
-    # write_csv()
-    read_f()
+    write_csv()
+    # read_f()

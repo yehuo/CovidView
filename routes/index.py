@@ -18,6 +18,25 @@ def index():
     return render_template("./login/login.html", user=u)
 
 
+def m_register(info):
+    # 邮箱注册
+    form = info
+    u = User.m_register(form)
+    if u is None:
+        # 邮箱已存在(exist)
+        return render_template("./login/login.html", user=u, m='m_reg_e')
+    elif u == 'f':
+        # 邮箱格式错误
+        return render_template("./login/login.html", user=u, m='m_reg_a')
+    else:
+        # 邮箱注册成功
+        return render_template("./login/login.html", user=u, m='m_reg_s')
+
+
+def m_login(info):
+    # 邮箱登录
+    pass
+
 def b_register(info):
     # 使用通过POST发来的form信息
     form = info
@@ -50,9 +69,9 @@ def login():
     form = request.form
     u = User.validate_login(form)
     if form['type'] == 'r':
-        page=b_register(form)
+        page = b_register(form)
     elif form['type'] == 'l':
-        page=b_login(form)
+        page = b_login(form)
     return page
 
 

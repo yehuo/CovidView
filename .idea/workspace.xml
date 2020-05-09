@@ -20,19 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9ddee9e-09b9-4d99-941d-43e28fb597f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db_init_prog/predict.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CovidView.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CovidView.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_init_prog/JohnsHopkins_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/db_init_prog/JohnsHopkins_spider.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_init_prog/confirm.csv" beforeDir="false" afterPath="$PROJECT_DIR$/db_init_prog/data/confirm.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_init_prog/dead.csv" beforeDir="false" afterPath="$PROJECT_DIR$/db_init_prog/data/dead.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_init_prog/heal.csv" beforeDir="false" afterPath="$PROJECT_DIR$/db_init_prog/data/heal.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/wsgi.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -371,6 +363,7 @@
       <workItem from="1588766611741" duration="2609000" />
       <workItem from="1588852553453" duration="1801000" />
       <workItem from="1588903604591" duration="6876000" />
+      <workItem from="1588988731532" duration="6863000" />
     </task>
     <servers />
   </component>
@@ -417,38 +410,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="123" key="#CovidView/0.0.1920.1040@0.0.1920.1040" timestamp="1588904116790" />
-    <state x="716" y="271" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588907096298">
+    <state x="716" y="271" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589036604736">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="716" y="271" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588907096298" />
+    <state x="716" y="271" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589036604736" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1588045677241">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588045677241" />
-    <state x="818" y="266" key="EnvironmentVariablesDialog" timestamp="1588904173555">
+    <state x="818" y="266" key="EnvironmentVariablesDialog" timestamp="1589036587281">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="818" y="266" key="EnvironmentVariablesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588904173555" />
+    <state x="818" y="266" key="EnvironmentVariablesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589036587281" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1588907091303">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588907091303" />
-    <state width="1054" height="254" key="GridCell.Tab.0.bottom" timestamp="1588932329464">
+    <state width="505" height="254" key="GridCell.Tab.0.bottom" timestamp="1589041937294">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1054" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588932329464" />
-    <state width="1054" height="254" key="GridCell.Tab.0.center" timestamp="1588932329464">
+    <state width="505" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589041937294" />
+    <state width="505" height="254" key="GridCell.Tab.0.center" timestamp="1589041937294">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1054" height="254" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588932329464" />
-    <state width="1054" height="254" key="GridCell.Tab.0.left" timestamp="1588932329464">
+    <state width="505" height="254" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589041937294" />
+    <state width="505" height="254" key="GridCell.Tab.0.left" timestamp="1589041937294">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1054" height="254" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588932329464" />
-    <state width="1054" height="254" key="GridCell.Tab.0.right" timestamp="1588932329464">
+    <state width="505" height="254" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589041937294" />
+    <state width="505" height="254" key="GridCell.Tab.0.right" timestamp="1589041937294">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1054" height="254" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588932329464" />
+    <state width="505" height="254" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589041937294" />
     <state x="461" y="151" key="SettingsEditor" timestamp="1588724700836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -462,7 +455,7 @@
     <SUITE FILE_PATH="coverage/CovidView$JohnsHopkins_spider.coverage" NAME="JohnsHopkins_spider Coverage Results" MODIFIED="1588907179827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_init_prog" />
     <SUITE FILE_PATH="coverage/CovidView$main.coverage" NAME="main Coverage Results" MODIFIED="1587830125700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_init_prog" />
     <SUITE FILE_PATH="coverage/CovidView$predict.coverage" NAME="predict Coverage Results" MODIFIED="1588907853897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_init_prog" />
-    <SUITE FILE_PATH="coverage/CovidView$CovidView.coverage" NAME="CovidView Coverage Results" MODIFIED="1588908656981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CovidView$CovidView.coverage" NAME="CovidView Coverage Results" MODIFIED="1588990354913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="masterDetails">
     <states>

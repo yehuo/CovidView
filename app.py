@@ -1,5 +1,5 @@
 from flask import Flask
-
+from flask_mail import Mail
 from models.base_model import db
 
 from routes.index import main as index_routes
@@ -63,7 +63,18 @@ def configured_app():
         'SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:{}@127.0.0.1:3306/test?charset=utf8mb4'.format(
         urllib.parse.quote_plus(dbConfig.password)
     )
+    # mails configuration
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    app.config['MAIL_SERVER'] = "smtp.qq.com"
+    app.config['MAIL_PORT'] = 465
+    app.config['MAIL_USER_SSL'] = True
+    app.config['MAIL_USERNAME'] = "2497473001@qq.com"
+    app.config['MAIL_PASSWORD'] = "foepmlrajfdveaii"  # POP3
+    # app.config['MAIL_PASSWORD'] = "gkzcfhyfefwaeadh"  # IMAP
+    app.config['MAIL_DEFAULT_SENDER'] = ("Luck:E", "2497473001@qq.com")
+    mail = Mail()
+    mail.init_app(app)
+
     db.init_app(app)
     register_routes(app)
     app.template_filter()(myfirst)

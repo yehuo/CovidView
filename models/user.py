@@ -1,7 +1,10 @@
 from sqlalchemy import Column, String,Integer
 from models.base_model import SQLMixin, db
 import time
+from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
+import base64
 import hashlib
+import time
 
 
 class User(SQLMixin, db.Model):
@@ -35,6 +38,23 @@ class User(SQLMixin, db.Model):
         s = hashlib.sha256(p)
         return s.hexdigest()
 
+    # 生成用于邮件发送的token
+    def generate_confirmation_token(self,expiration=3600):
+        s=Serializer(current_app.config['SECRET_KEY'], expiration)
+        return s.dumps({'confirm': self.id})
+
+    # 验证token
+    def confirm(self, token):
+        s = Serializer(current_app.config['SECRET_KEY'])
+        try:
+            data = s.loads(token)  # 解码
+        except Exception as e:
+            return False
+        if data.get('confirm') != self.id:
+            return False
+        self.status = True
+        db.session.commit()
+        return True
     # 检查邮箱是否符合规范
     def mailbox_check(self,address):
         # todo:检查邮箱格式

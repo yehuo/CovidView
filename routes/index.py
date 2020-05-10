@@ -19,57 +19,61 @@ def index():
     u = current_user()
     return render_template("./login/login.html", user=u)
 
+@main.route("/mail")
+def mail_index():
+    u = current_user()
+    return render_template("./login/mail.html", user=u)
 
 # 邮箱注册
 def m_register(info):
+    print('register by mailbox')
     form = info
     u = User.m_register(form)
     if u is None:
         # 邮箱已存在(exist)
-        return render_template("./login/login.html", user=u, m='m_reg_e')
+        return render_template("./login/mail.html", user=u, m='m_reg_e')
     elif u == 'f':
-        # 邮箱格式错误
-        return render_template("./login/login.html", user=u, m='m_reg_a')
+        # 邮箱格式错误或密码不符合规范
+        return render_template("./login/mail.html", user=u, m='m_reg_a')
     else:
         # 邮箱注册成功
-        return render_template("./login/login.html", user=u, m='m_reg_s')
+        return render_template("./login/mail.html", user=u, m='m_reg_s')
 
 
 # 邮箱登录
 def m_login(info):
-    pass
-
-
-@main.route("/send_activate/<int:user_id>")
-def send_activate(user_id):
-    user = User.one(User.id == user_id).first()
-    if user.status:
-        return redirect(".home")
-    token = user.generate_confirmation_token()
-    send_confirm_email(user=user, token=token)
-    flash(u'激活邮件已发送，请注意查收邮箱')
-    return render_template("user/activate.html")
+    print('login by mailbox')
+    form = info
+    u = User.m_validate_login(form)
+    if u is None:
+        # 登录失败(fail)
+        return render_template("./login/mail.html", user=u, m='m_login_f')
+    else:
+        session['user_id'] = u.id
+        session.permanent = True
+        return redirect(url_for('dashboard.index'))
 
 
 # 邮件链接登录
-@main.route("/activation/<token>")
+@main.route("/activate/<token>")
 def activation(token):
-    if current_user.confirm(token):
-        flash(u'账户已成功激活！')
-        return redirect(url_for(".home"))
+    u=User.confirm(token)
+    if u:
+        flash(u'账户已成功激活，请登录！')
+        return redirect(url_for("mail_index"))
     else:
-        flash(u'激活失败，请重试')
-        return render_template("user/activate.html")  # 到激活界面
+        flash(u'激活失败，请重新注册')
+        return render_template("mail_index")  # 到激活界面
 
 
 # 邮箱登录页面
 @main.route("/mail_login", methods=['POST'])
 def mail_login():
     form = request.form
-    u = User.validate_login(form)
-    if form['type'] == 'r':
+    # u = User.validate_login(form)
+    if form['type'] == 'm_r':
         page = m_register(form)
-    elif form['type'] == 'l':
+    elif form['type'] == 'm_l':
         page = m_login(form)
     return page
 

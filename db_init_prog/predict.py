@@ -123,4 +123,4 @@ def sir_pridict(country,startdate):
 
 
 if __name__ == '__main__':
-    sir_pridict(country='China',startdate='1/22/20')
+    sir_pridict(country='Japan',startdate='1/22/20')

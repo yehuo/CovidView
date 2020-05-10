@@ -1,4 +1,51 @@
 {% extends "./login/base.html" %}
+
 {% block title %}
     <title>Covid|BasicLogin</title>
+{% endblock %}
+
+{% block welcome %}
+    <div id="welcome-top" class="col-12 row justify-content-center">
+
+        <div class="mainlogo">
+
+            <h1>CovidView</h1>
+        </div>
+    </div>
+    <div id="welcomr-mid" class="col-12 row justify-content-center">
+        <p class="row">欢迎您通过邮箱登录CovidView网站</p>
+    </div>
+    <div id="welcome-footer" class="col-12 row justify-content-center">
+        <span class="row">测试账号:user0(用户名)，123456(密码)</span>
+    </div>
+{% endblock %}
+
+{% block main %}
+    <div style="background: white;border-radius: 20px" class="col-4 row justify-content-center">
+        <form method="post" class="col-12 mt-3" action="{{ url_for('index.mail_login') }}">
+            <div class="form-group">
+                <i class="fa fa-user-circle" style="position: absolute; top: 5px;left: 5px;" aria-hidden="true"></i>
+                <label for="reg-username">邮箱:</label>
+                <input id='reg-username' class="form-control" type="text" name="mail" placeholder="Email Address"/>
+            </div>
+            <div class="form-group">
+                <label for="reg-password">密码:</label>
+                <input id="reg-password" type="password" class="form-control" name="password" placeholder="Password"/>
+            </div>
+            <div class="row justify-content-around my-2">
+                <button type="submit" class="btn btn-primary col-4" name="type" value="m_r">邮箱注册</button>
+                <button type="submit" class="btn btn-primary col-4" name="type" value="m_l">邮箱登录</button>
+            </div>
+        </form>
+        <a href='{{ url_for('index.index') }}' class="col-11 mx-auto">
+            <button type="button" class="btn btn-primary col-12 mb-3">普通登录</button>
+        </a>
+    </div>
+{% endblock %}
+
+{% block extraButton %}
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item list-group-item-primary"><a href="{{ url_for('index.index') }}">注册</a></li>
+        <li class="list-group-item list-group-item-primary"><a href="{{ url_for('index.index') }}">普通登录</a></li>
+    </ul>
 {% endblock %}

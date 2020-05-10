@@ -13,7 +13,7 @@
         </div>
     </div>
     <div id="welcomr-mid" class="col-12 row justify-content-center">
-        <p class="row">欢迎您通过密码登录CovidView网站</p>
+        <p class="row">欢迎您通过用户名登录CovidView网站</p>
     </div>
     <div id="welcome-footer" class="col-12 row justify-content-center">
         <span class="row">测试账号:user0(用户名)，123456(密码)</span>
@@ -37,7 +37,7 @@
                 <button type="submit" class="btn btn-primary col-4" name="type" value="l">登录</button>
             </div>
         </form>
-        <a href='#' class="col-11 mx-auto">
+        <a href='{{ url_for('index.mail_index') }}' class="col-11 mx-auto">
             <button type="button" class="btn btn-primary col-12 mb-3">邮箱登录</button>
         </a>
     </div>
@@ -46,6 +46,6 @@
 {% block extraButton %}
     <ul class="list-group list-group-horizontal">
         <li class="list-group-item list-group-item-primary"><a href="{{ url_for('index.index') }}">注册</a></li>
-        <li class="list-group-item list-group-item-primary"><a href="{{ url_for('index.login') }}">邮箱登录</a></li>
+        <li class="list-group-item list-group-item-primary"><a href="{{ url_for('index.mail_index') }}">邮箱登录</a></li>
     </ul>
 {% endblock %}

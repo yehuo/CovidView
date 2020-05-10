@@ -1,5 +1,5 @@
-from flask import Flask
-from flask_mail import Mail
+from flask import Flask, current_app, render_template
+from flask_mail import Mail, Message
 from models.base_model import db
 
 from routes.index import main as index_routes
@@ -10,9 +10,9 @@ from routes.board import main as board_route
 from routes.message import main as message_route
 from routes.news import main as news_route
 from routes.reply import main as reply_route
+
 import time
 from datetime import datetime
-
 from config_info import dbConfig, appConfig
 import urllib.parse
 
@@ -56,6 +56,7 @@ def register_routes(app):
     app.register_blueprint(reply_route, url_prefix='/reply')
 
 
+
 def configured_app():
     app = Flask(__name__)
     app.secret_key = appConfig.secret_key
@@ -65,16 +66,6 @@ def configured_app():
     )
     # mails configuration
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-    app.config['MAIL_SERVER'] = "smtp.qq.com"
-    app.config['MAIL_PORT'] = 465
-    app.config['MAIL_USER_SSL'] = True
-    app.config['MAIL_USERNAME'] = "2497473001@qq.com"
-    app.config['MAIL_PASSWORD'] = "foepmlrajfdveaii"  # POP3
-    # app.config['MAIL_PASSWORD'] = "gkzcfhyfefwaeadh"  # IMAP
-    app.config['MAIL_DEFAULT_SENDER'] = ("Luck:E", "2497473001@qq.com")
-    mail = Mail()
-    mail.init_app(app)
-
     db.init_app(app)
     register_routes(app)
     app.template_filter()(myfirst)

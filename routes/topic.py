@@ -34,16 +34,29 @@ def index():
 def detail(id):
     m = Topic.get(id)
     u = current_user()
-    l = Collect.one(topic_id=m.id)
-    return render_template("topic/detail.html", topic=m, u=u, l=l)
+    c = 'n'  # 未收藏
+    if Collect.one(topic_id=m.id, user_id=u.id) is not None:
+        c = 'c'
+    return render_template("topic/detail.html", topic=m, u=u, c=c)
 
 
 @main.route('/collect/<int:id>')
 def collect_detail(id):
+    print('topic collected')
     m = Topic.get(id)
     u = current_user()
-    l = Collect.one(topic_id=m.id, user_id=u.id)
-    return render_template("topic/collect.html", topic=m, u=u, l=l)
+    l = Collect.add(topic_id=m.id, user_id=u.id)
+    return render_template("topic/detail.html", topic=m, u=u, l=l)
+
+
+@main.route('/collect_delete/<int:id>')
+def collect_delete(id):
+    m = Topic.get(id)
+    u = current_user()
+    collect_item = Collect.one(topic_id=m.id, user_id=u.id)
+    Collect.delete(collect_item.id)
+    c = 'n'
+    return render_template("topic/detail.html", topic=m, u=u, c=c)
 
 
 @main.route("/delete")

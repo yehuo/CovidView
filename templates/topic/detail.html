@@ -3,12 +3,18 @@
 {% set author = topic.user() %}
 <div class="panel col-12">
 	<div class="media bg-light ml-auto mr-5 detail-block">
+		
 		<div class="user-img">
 			<a href="{{ url_for('user.index', id=u.id) }}">
 				<img src="{{ author.img }}" class="rounded-circle"/>
 			</a>	
 		</div>
 		<div class="media-body main-item">
+			{% if c=='n' %}
+				<button class="btn btn-primary pull-right"><a href="{{ url_for('topic.collect_detail',id=topic.id) }}">添加收藏</a></button>
+			{% else %}
+				<button class="btn btn-primary pull-right"><a href="{{ url_for('topic.collect_delete',id=topic.id) }}">取消收藏</a></button>
+			{% endif %}
 			<h5>{{ topic.title }}</h5>
 			<p class="text-muted main-item-info">用户{{ author.username }}发布于 <span class="time-string">{{ topic.createTime }}</span> • 获 {{ topic.views }} 次浏览</p>
 			<!-- 帖子正文内容 -->

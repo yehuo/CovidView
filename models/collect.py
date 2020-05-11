@@ -8,7 +8,6 @@ from models.user import User
 
 class Collect(SQLMixin, db.Model):
     __tablename__='Collect'
-    num = Column(Integer, nullable=False, default=0)
     topic_id = Column(Integer, nullable=False)
     user_id = Column(Integer, nullable=False)
 
@@ -17,7 +16,9 @@ class Collect(SQLMixin, db.Model):
         return u
 
     @classmethod
-    def new(cls, form, user_id):
-        form['user_id'] = user_id
-        collect= cls.new(form)
+    def add(cls, topic_id, user_id):
+        form=dict()
+        form['topic_id']=topic_id
+        form['user_id']=user_id
+        collect= super().new(form)
         return collect

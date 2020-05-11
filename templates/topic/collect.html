@@ -7,11 +7,16 @@
 
 {% block topicList %}
 <div class="panel col-12">
+	{% if ms==[] %}
+	<div class="card mx-auto mt-3" style="width:30%">
+		<p class="m-auto text-"><i class="fa fa-plus-square-o mr-2"></i>暂时还没收藏记录哦~</p>
+	</div>
+	{% else %}
 	<div id="topic-list">
 		{% for t in ms %}
 		{% set u = t.user() %}
 		{# 用户头像#}
-		<div class="card mb-3">
+		<div class="card mt-3 mr-3">
 			<div class="card-header">
 				<a class="topic_title" href="{{ url_for('topic.detail', id=t.id) }}">
 					{% if t.title == '' %}
@@ -22,9 +27,9 @@
 				</a>
 			</div>
 			<div class="card-body row">
-				<div class="col-1 p-0">
-					<a class="user_avatar mt-2" href="{{ url_for('user.index', id=t.user_id) }}">
-						<img style="width: 100%;" src="{{ u.img }}">
+				<div class="col-1 pr-1">
+					<a class="user_avatar mt-2 mx-auto" href="{{ url_for('user.index', id=t.user_id) }}">
+						<img class="rounded-circle" style="width: 80px;" src="{{ u.img }}">
 					</a>
 				</div>
 				<div class="col-11">
@@ -55,6 +60,7 @@
 		</div>
 		{% endfor %}
 	</div>
+	{% endif %}
 </div>
 </div>
 {% endblock %}

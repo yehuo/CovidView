@@ -123,9 +123,9 @@ def my_collect():
     u = current_user()
     token = new_csrf_token()
     bs = Board.all()
-    t = Collect.all(u_id=u.id)
+    t = Collect.all(user_id=u.id)
     l = []
     for c in t:
         l.append(Topic.one(id=c.topic_id))
 
-    return render_template("message/collected.html", user=u, ms=l, bs=bs, token=token)
+    return render_template("topic/collect.html", u=u, ms=l, bs=bs, token=token)

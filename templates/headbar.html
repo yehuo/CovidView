@@ -1,5 +1,5 @@
 <nav id='header-nav' class="navbar flex-md-nowrap p-0 row shadow fixed-top" style="height: 65px;">
-	<a id="logo" class="navbar-brand col-md-2 bg-light h-100" href="#" style="margin-left: 10px; padding-left: 5px;">CrovidView</a>
+	<a id="logo" class="navbar-brand col-md-2 bg-light h-100" href="{{ url_for('dashboard.index') }}" style="margin-left: 10px; padding-left: 5px;">CrovidView</a>
 	<!-- 搜索栏 -->
 	<input class="form-control form-control-dark mr-auto w-25" type="text" name='C' placeholder="Input Country Here"
 	 aria-label="Search">
@@ -9,7 +9,7 @@
 	</a>
 	<!-- 用户名 -->
 	<div class="dropdown">
-		<a class="nav-link dropdown-toggle mr-5" href="#" role="button" id="usernameDropdown" data-toggle="dropdown" data-hover="dropdown"
+		<a id="username_link" class="nav-link dropdown-toggle mr-5" href="#" role="button" id="usernameDropdown" data-toggle="dropdown" data-hover="dropdown"
 			aria-haspopup="true" aria-expanded="false">
 				{{ u.username }}
 		</a>

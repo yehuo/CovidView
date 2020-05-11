@@ -7,11 +7,11 @@
 	background-color:#717af1 ;
 }
 #logo{
-	font-weight: 150;
+	font-size: 40px;
 	font-family: castellar;
 	font-weight: bold;
 	font-style: italic;
-	padding-top: 10px;
+	padding-top: 5px;
 	color: #000000;
 }
 .navbar-brand{
@@ -45,7 +45,17 @@
 a.nav-link{
 	font-size: 18px;
 	color: #949494;
+	padding-left: 30px;
 }
 a.nav-link i{
 	margin-right: 16px;
+}
+a.nav-link:hover{
+	font-size: 18px;
+	color: black;
+	background-color: dimgray;
+	padding-left: 30px;
+}
+.dropdown a:hover{
+	background-color: transparent;
 }

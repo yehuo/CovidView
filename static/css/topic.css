@@ -1,34 +1,52 @@
-.detail-block{
+.detail-block {
 	width: 95%;
 	padding: 5px;
 	margin-top: 25px;
 	border-radius: 5px;
 }
-.user-img{
+
+.user-img {
 	margin: 10px;
 }
-.user-img img{
+
+.user-img img {
 	height: 55px;
 }
-.main-item h5{
+
+.main-item h5 {
 	margin: 5px;
 	color: black;
 }
-.main-item-info{
-	margin-left:5px;
+
+.main-item-info {
+	margin-left: 5px;
 }
-.time-string{
+
+.time-string {
 	font-style: italic;
 }
-.addon-block{
+
+.addon-block {
 	width: 95%;
 	padding: 5px;
 	margin-top: 25px;
 	border-radius: 5px;
 }
-#add-on-infos{
+
+#add-on-infos {
 	border-radius: 20px;
 }
-#nav-path{
+
+#nav-path {
 	background: #007BFF;
+}
+
+.collect-button {
+	color: white;
+	text-decoration: none;
+}
+
+.collect-button:hover {
+	color: gainsboro;
+	text-decoration: none;
 }

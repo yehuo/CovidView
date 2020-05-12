@@ -1,5 +1,6 @@
 from flask import Flask, current_app, render_template
 from flask_mail import Mail, Message
+from flask.json import JSONEncoder
 from models.base_model import db
 
 from routes.index import main as index_routes
@@ -12,9 +13,21 @@ from routes.news import main as news_route
 from routes.reply import main as reply_route
 
 import time
-from datetime import datetime
+from datetime import datetime,date
 from config_info import dbConfig, appConfig
 import urllib.parse
+
+class CustomJSONEncoder(JSONEncoder):
+    def default(self, o):
+        try:
+            if isinstance(o,date):
+                return o.isoformat()
+            iterable=iter(o)
+        except TypeError:
+            pass
+        else:
+            return list(iterable)
+        return JSONEncoder.default(self,o)
 
 
 def myfirst(list):
@@ -72,6 +85,7 @@ def configured_app():
     app.template_filter()(formatte_time)
     app.template_filter()(date_time)
     app.template_filter()(safe_str)
+    app.json_encoder=CustomJSONEncoder
     return app
 
 

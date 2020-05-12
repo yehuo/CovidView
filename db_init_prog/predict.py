@@ -112,7 +112,7 @@ def loss(point, data, recovered, s_0, i_0, r_0):
     return alpha * l1 + (1 - alpha) * l2
 
 
-def sir_pridict(country,startdate):
+def sir_pridict(country, startdate):
     s_0 = 15000
     i_0 = 2
     r_0 = 0
@@ -123,4 +123,4 @@ def sir_pridict(country,startdate):
 
 
 if __name__ == '__main__':
-    sir_pridict(country='Japan',startdate='1/22/20')
+    sir_pridict(country='Japan', startdate='1/22/20')

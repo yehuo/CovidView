@@ -222,3 +222,5 @@ def getLineData():
         "history": his_infos,
         "forecast": forecast_infos
     })
+
+

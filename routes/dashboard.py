@@ -5,6 +5,7 @@ from models.data_china import ChinaStatus
 from models.data_global import GlobalStatus
 from models.c_history import ChinaHistory
 from models.g_history import GlobalHistory
+from models.multi_history import MultiHistory
 from routes.helper import current_user
 from models.user import User
 from models.country import Country
@@ -20,6 +21,20 @@ from flask import (
     send_from_directory)
 
 main = Blueprint('dashboard', __name__)
+# ['Japan', 'Korea, South', 'Russia', 'India', 'Pakistan', 'Brazil', 'South Africa', 'United Kingdom','France', 'Germany', 'Italy', 'Iran']
+country_dict = {
+    "日本": "Japan",
+    "韩国": "Korean, South",
+    "俄罗斯": "Russia",
+    "印度": "India",
+    "巴基斯坦": "Pakistan",
+    "巴西": "Brazil",
+    "南非": "South Africa",
+    "英国": "United Kingdom",
+    "法国": "France",
+    "德国": "Germany",
+    "意大利": "Italy", "伊朗": "Iran",
+}
 
 
 @main.route("/")
@@ -126,9 +141,11 @@ def forecast():
     return render_template('dashboard/forecast.html', data=global_data, u=user, type='Global')
 
 
-@main.route('/forecast/<string:type>')
-def forecast_detail(type):
-    # 支持两种预测：China/Global,首页显示Global
+@main.route('/forecast/')
+def forecast_detail():
+    type=request.args.get('C')
+    print(type)
+    # 支持12个国家
     user = current_user()
     if type == 'Global':
         return redirect('.forcast')
@@ -141,10 +158,26 @@ def forecast_detail(type):
                 'confirm': data.confirm,
                 'heal': data.heal,
                 'dead': data.dead,
-                'nowConfirm': data.nowConfirm
+                'nowConfirm': data.nowConfirm,
+                'img': "/images/China.png"
             }
         }
-        return render_template('dashboard/maps.html', data=china_data, u=user, type='China')
+        return render_template('dashboard/forecast.html', data=china_data, u=user, type='China')
+    elif type in country_dict.keys():
+        print('lets forecast type')
+        data = GlobalStatus().one(country=type)
+        response_data = {
+            'time': data.updateTime,
+            'name': type,
+            'data': {
+                'confirm': data.confirm,
+                'heal': data.heal,
+                'dead': data.dead,
+                'nowConfirm': data.nowConfirm,
+                'img': "/images/"+country_dict[type]+".png"
+            }
+        }
+        return render_template('dashboard/forecast.html', data=response_data, u=user, type=type)
     else:
         print("no such forecast type")
 
@@ -216,6 +249,14 @@ def getLineData():
             confirm_row.append(daily_infos.confirm)
             new_row.append(daily_infos.newAddConfirm)
         his_infos = [date_row, heal_row, dead_row, confirm_row, new_row]
+    elif type in country_dict.keys() :  # 世界疫情预测
+        history=MultiHistory.all(country=country_dict[type])
+        for daily_infos in history:
+            date_row.append(daily_infos.date)
+            heal_row.append(daily_infos.heal)
+            dead_row.append(daily_infos.dead)
+            confirm_row.append(daily_infos.confirm)
+        his_infos = [date_row, heal_row, dead_row, confirm_row]
     else:
         pro_info_list = []
     return jsonify({
@@ -223,4 +264,25 @@ def getLineData():
         "forecast": forecast_infos
     })
 
-
+# @main.route('/predict', methods=['POST'])
+# def predict():
+#     country_dict = {
+#         # 'Japan', 'Korea, South', 'Russia', 'India', 'Pakistan', 'Brazil', 'South Africa', 'United Kingdom',
+#         # 'France', 'Germany', 'Italy', 'Iran', 'China.Hubei']
+#         "日本": "Japan",
+#         "韩国": "Korea, South",
+#         "俄罗斯": "Russia",
+#         "印度": "India",
+#         "巴基斯坦": "Pakistan",
+#         "巴西": "Brazil",
+#         "南非": "South Africa",
+#         "英国": "United Kingdom",
+#         "法国": "France",
+#         "德国": "Germany",
+#         "意大利": "Italy",
+#         "伊朗": "Iran",
+#         "中国":"China"
+#     }
+#     searchName = request.form['pos']
+#     pic_path=country_dict[searchName]+'.png'
+#     return

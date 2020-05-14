@@ -34,34 +34,13 @@
 
 {% block viewblock %}
 <div id="chart-line-container" class="col-12">
-	<div id="chart-line" style="height: 400px">
+	<div id="chart-line" class="bg-light p-3 m-3" style="height: 400px">
 
 	</div>
 	<div id="predict-line" style="height:400px">
-		<img src="{{ url_for('dashboard.predict',pos=data['name']) }}"/>
+		<img class="p-3 m-3" style="width: auto; border-radius: 5px;" src="{{ data['data']['img'] }}"/>
 	</div>
 </div>
-<!-- <div id="chart-table" class="col-12">
-	<table class="table">
-	  <thead>
-	    <tr>
-	      <th scope="col">#</th>
-	      <th scope="col">First</th>
-	      <th scope="col">Last</th>
-	      <th scope="col">Handle</th>
-	    </tr>
-	  </thead>
-	  <tbody>
-	{% for daily_info in forecast_infos %}
-		<tr>
-	      <th scope="row">1</th>
-	      <td>Mark</td>
-	      <td>Otto</td>
-	      <td>@mdo</td>
-	    </tr>
-	{% endfor %}
-	</tbody>
-</div> -->
 <script type="text/javascript">
 	$.post("/dashboard/lineChartData", {
 		"type": '{{ type }}'
@@ -96,19 +75,19 @@
 				containLabel: true
 			},
 			legend: {
-				data: ['heal', 'dead', 'newAddConfirm', 'confirm']
+				data: ['heal', 'dead', 'confirm']
 			},
 			dataset: {
 				source: data.history
 			},
 			dataZoom: [
 				{
-				            show: true,
-				            realtime: true,
-				            start: 30,
-				            end: 70,
-				            xAxisIndex: [0]
-				        },
+				    show: true,
+				    realtime: true,
+				    start: 30,
+				    end: 70,
+				    xAxisIndex: [0]
+				},
 				{
 					type: 'inside',
 					realtime: true,
@@ -127,11 +106,6 @@
 				gridIndex: 0
 			},
 			series: [{
-					type: 'line',
-					smooth: true,
-					seriesLayoutBy: 'row'
-				},
-				{
 					type: 'line',
 					smooth: true,
 					seriesLayoutBy: 'row'

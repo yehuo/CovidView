@@ -20,18 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9ddee9e-09b9-4d99-941d-43e28fb597f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/db_init_prog/predict_map/Japan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db_init_prog/predictable_country_setter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CovidView.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CovidView.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/China.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/multi_history.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_init_prog/China.png" beforeDir="false" afterPath="$PROJECT_DIR$/db_init_prog/predict_map/China.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_init_prog/Japan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_init_prog/JohnsHopkins_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/db_init_prog/JohnsHopkins_spider.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db_init_prog/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/db_init_prog/predict.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_init_prog/predict_map/China.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_init_prog/predict_map/Japan.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Japan.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/routes/dashboard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/message.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/message.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/dashboard/forecast.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard/forecast.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/headbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/headbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/message/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/message/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +96,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/wsgi.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -101,22 +104,22 @@
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/todoList.pdf" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\fffy\CovidView" />
-      <recent name="D:\workspace\CovidView\db_init_prog" />
-      <recent name="D:\workspace\CovidView\static\js" />
-      <recent name="D:\workspace\CovidView\static\css" />
-      <recent name="D:\workspace\CovidView" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\fffy\CovidView\images" />
       <recent name="C:\Users\fffy\CovidView\db_init_prog\predict_map" />
       <recent name="C:\Users\fffy\CovidView\db_init_prog\data" />
       <recent name="C:\Users\fffy\CovidView" />
       <recent name="D:\workspace\CovidView" />
-      <recent name="D:\workspace\CovidView\static\css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\fffy\CovidView\images" />
+      <recent name="C:\Users\fffy\CovidView\db_init_prog\data" />
+      <recent name="C:\Users\fffy\CovidView" />
+      <recent name="D:\workspace\CovidView\db_init_prog" />
+      <recent name="D:\workspace\CovidView\static\js" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.predict">
+  <component name="RunManager" selected="Flask server.CovidView">
     <configuration name="JohnsHopkins_spider" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="CovidView" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -131,6 +134,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/db_init_prog/JohnsHopkins_spider.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python Console" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CovidView" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="/Python Console" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -197,6 +222,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/db_init_prog/china_status_spider.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dashboard" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CovidView" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/routes" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/routes/dashboard.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -346,7 +393,15 @@
       <item itemvalue="Python.china_status_spider" />
       <item itemvalue="Python.global_spider" />
       <item itemvalue="Python.china_history_spider" />
+      <item itemvalue="Python.Python Console" />
+      <item itemvalue="Python.dashboard" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.dashboard" />
+        <item itemvalue="Python.Python Console" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -386,6 +441,7 @@
       <workItem from="1589087041695" duration="21037000" />
       <workItem from="1589169330733" duration="4337000" />
       <workItem from="1589206413838" duration="4839000" />
+      <workItem from="1589362063588" duration="23825000" />
     </task>
     <servers />
   </component>
@@ -399,7 +455,7 @@
     </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -448,40 +504,42 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589250482162" />
-    <state width="1051" height="258" key="GridCell.Tab.0.bottom" timestamp="1589292573890">
+    <state width="1550" height="255" key="GridCell.Tab.0.bottom" timestamp="1589465609523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1051" height="258" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589292573890" />
-    <state width="1051" height="258" key="GridCell.Tab.0.center" timestamp="1589292573890">
+    <state width="1550" height="255" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589465609523" />
+    <state width="1550" height="255" key="GridCell.Tab.0.center" timestamp="1589465609523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1051" height="258" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589292573890" />
-    <state width="1051" height="258" key="GridCell.Tab.0.left" timestamp="1589292573889">
+    <state width="1550" height="255" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589465609523" />
+    <state width="1550" height="255" key="GridCell.Tab.0.left" timestamp="1589465609523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1051" height="258" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589292573889" />
-    <state width="1051" height="258" key="GridCell.Tab.0.right" timestamp="1589292573890">
+    <state width="1550" height="255" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589465609523" />
+    <state width="1550" height="255" key="GridCell.Tab.0.right" timestamp="1589465609523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1051" height="258" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589292573890" />
+    <state width="1550" height="255" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589465609523" />
     <state x="461" y="151" key="SettingsEditor" timestamp="1589292507667">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="151" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1589292507667" />
-    <state x="662" y="82" width="596" height="876" key="find.popup" timestamp="1589287844657">
+    <state x="662" y="82" width="596" height="876" key="find.popup" timestamp="1589450286009">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="662" y="82" width="596" height="876" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1589287844657" />
+    <state x="662" y="82" width="596" height="876" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1589450286009" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1588932086492">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588932086492" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CovidView$JohnsHopkins_spider.coverage" NAME="JohnsHopkins_spider Coverage Results" MODIFIED="1588907179827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_init_prog" />
+    <SUITE FILE_PATH="coverage/CovidView$JohnsHopkins_spider.coverage" NAME="JohnsHopkins_spider Coverage Results" MODIFIED="1589461413629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_init_prog" />
+    <SUITE FILE_PATH="coverage/CovidView$dashboard.coverage" NAME="dashboard Coverage Results" MODIFIED="1589462016675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/routes" />
+    <SUITE FILE_PATH="coverage/CovidView$Python_Console.coverage" NAME="Python Console Coverage Results" MODIFIED="1589459239399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/CovidView$main.coverage" NAME="main Coverage Results" MODIFIED="1587830125700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_init_prog" />
-    <SUITE FILE_PATH="coverage/CovidView$predict.coverage" NAME="predict Coverage Results" MODIFIED="1589292536733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_init_prog" />
-    <SUITE FILE_PATH="coverage/CovidView$CovidView.coverage" NAME="CovidView Coverage Results" MODIFIED="1589250563957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CovidView$predict.coverage" NAME="predict Coverage Results" MODIFIED="1589442804145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_init_prog" />
+    <SUITE FILE_PATH="coverage/CovidView$CovidView.coverage" NAME="CovidView Coverage Results" MODIFIED="1589462801992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CovidView$predictable_country_setter.coverage" NAME="predictable_country_setter Coverage Results" MODIFIED="1589292018514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_init_prog" />
   </component>
   <component name="masterDetails">

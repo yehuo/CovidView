@@ -1,8 +1,11 @@
 <nav id='header-nav' class="navbar flex-md-nowrap p-0 row shadow fixed-top" style="height: 65px;">
 	<a id="logo" class="navbar-brand col-md-2 bg-light h-100" href="{{ url_for('dashboard.index') }}" style="margin-left: 10px; padding-left: 5px;">CrovidView</a>
 	<!-- 搜索栏 -->
-	<input class="form-control form-control-dark mr-auto w-25" type="text" name='C' placeholder="Input Country Here"
+	<form class="form-inline mr-auto" action="{{ url_for('dashboard.forecast_detail') }}" method="get">
+		<input id="search_bar" class="form-control form-control-dark mr-2" type="text" name='C' placeholder="Input Country Here"
 	 aria-label="Search">
+		<input type="submit" style="visibility: hidden;">
+	 </form>
 	<!-- 头像 -->
 	<a href="{{ url_for('user.index', id=u.id) }}">
 		<img src="{{ u.img }}" class="user-img rounded-circle" style="width: 55px;" />

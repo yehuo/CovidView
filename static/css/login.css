@@ -1,6 +1,10 @@
+body{
+	background: url(../../images/register.jpg);
+	background-repeat: no-repeat;
+}
 #welcome{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
+    color: black;
 }
 .mainlogo{
     font-weight: 400;
